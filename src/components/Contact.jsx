@@ -1,0 +1,68 @@
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+
+const info = [
+  {
+    title: 'Location',
+    icon: <path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />,
+    body: <span>NX One, T-3, Office A 423, Techzone 4, Greater Noida West, Uttar Pradesh 201306</span>,
+  },
+  {
+    title: 'Sales enquiry',
+    icon: <path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.2.2 2.4.56 3.5a1 1 0 0 1-.25 1z" />,
+    body: <a href="tel:+918448983343">+91-84489 83343</a>,
+  },
+  {
+    title: 'Email',
+    icon: <path d="M3 5h18a1 1 0 0 1 1 1v.5l-10 6.5L2 6.5V6a1 1 0 0 1 1-1zm-1 4.2l10 6.5 10-6.5V18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />,
+    body: <a href="mailto:info@blixtechnologies.com">info@blixtechnologies.com</a>,
+  },
+  {
+    title: 'Working hours',
+    icon: <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5v5.4l3.8 2.3-.8 1.3L11 13V7z" />,
+    body: <span>Mon to Fri, 10:00 AM to 7:00 PM</span>,
+  },
+]
+
+export default function Contact() {
+  const [sent, setSent] = useState(false)
+
+  function handleSubmit(e) {
+    e.preventDefault()
+    setSent(true)
+  }
+
+  return (
+    <section className="contact" id="contact" style={{ paddingTop: 80 }}>
+      <div className="wrap">
+        <span className="kicker reveal">Contact</span>
+        <h2 className="h2 reveal-slide">Get in touch</h2>
+        <div className="grid">
+          <div className="card-info reveal-left" data-vi="up" data-vi-speed="25">
+            {info.map((item) => (
+              <div key={item.title}>
+                <svg viewBox="0 0 24 24" fill="currentColor">{item.icon}</svg>
+                <span>
+                  <h3>{item.title}</h3>
+                  {item.body}
+                </span>
+              </div>
+            ))}
+          </div>
+          <form onSubmit={handleSubmit} noValidate className="reveal-right">
+            <input type="text" placeholder="Name" aria-label="Name" />
+            <input type="email" placeholder="Email address" aria-label="Email address" />
+            <input className="full" type="tel" placeholder="Phone no." aria-label="Phone number" />
+            <textarea className="full" placeholder="Message" aria-label="Message"></textarea>
+            <Link to="/contact" className="btn btn-line" style={{ gridColumn: '1 / -1', justifySelf: 'start' }}>
+              Open full contact form →
+            </Link>
+            <p className={`ok-msg full${sent ? ' show' : ''}`} role="status">
+              Thanks! We've received your message and will reply within one working day.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  )
+}

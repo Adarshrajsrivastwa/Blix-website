@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0C0E2B"/>
+      <stop offset="50%" stop-color="#2E3192"/>
+      <stop offset="100%" stop-color="#EC008C"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2E3192"/>
+      <stop offset="100%" stop-color="#EC008C"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="8" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.25"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g opacity="0.08" fill="white">
+    <circle cx="120" cy="120" r="140"/>
+    <circle cx="1070" cy="510" r="180"/>
+    <rect x="950" y="80" width="180" height="180" rx="30" transform="rotate(20 1040 170)"/>
+  </g>
+
+  <g transform="translate(80,70)" filter="url(#softShadow)">
+    <rect width="124" height="124" rx="28" fill="url(#accent)"/>
+    <text x="62" y="90" text-anchor="middle" font-family="Manrope, Segoe UI, sans-serif" font-weight="800" font-size="82" fill="white" letter-spacing="-4">B</text>
+  </g>
+
+  <g transform="translate(232,92)">
+    <rect y="10" width="56" height="10" rx="5" fill="#FFD400"/>
+    <text x="78" y="34" font-family="Manrope, Segoe UI, sans-serif" font-weight="800" font-size="46" fill="white" letter-spacing="2">BLIX</text>
+    <text x="78" y="76" font-family="Inter, Segoe UI, sans-serif" font-weight="400" font-size="22" fill="#D0D4FF" letter-spacing="1">TECHNOLOGIES</text>
+  </g>
+
+  <text x="80" y="320" font-family="Manrope, Segoe UI, sans-serif" font-weight="800" font-size="76" fill="white" letter-spacing="-2">
+    AI Digital Marketing
+  </text>
+  <text x="80" y="408" font-family="Manrope, Segoe UI, sans-serif" font-weight="800" font-size="76" fill="white" letter-spacing="-2">
+    Agency in Noida
+  </text>
+
+  <text x="80" y="472" font-family="Inter, Segoe UI, sans-serif" font-weight="400" font-size="30" fill="#D0D4FF">
+    SEO · SMM · Paid Ads · Web Design · App Dev · 360° Growth
+  </text>
+
+  <g transform="translate(80,514)">
+    <rect width="420" height="56" rx="28" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.18)"/>
+    <text x="210" y="36" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-weight="500" font-size="22" fill="#FFD400">
+      info@blixtechnologies.com · +91-84489 83343
+    </text>
+  </g>
+
+  <g transform="translate(980,520)">
+    <rect width="160" height="56" rx="28" fill="url(#accent)"/>
+    <text x="80" y="36" text-anchor="middle" font-family="Manrope, Segoe UI, sans-serif" font-weight="700" font-size="20" fill="white">
+      blixtechnologies.com
+    </text>
+  </g>
+</svg>
