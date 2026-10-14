@@ -17,18 +17,21 @@ const links = [
   { to: '/', label: 'Home', key: 'home' },
   { to: '/about', label: 'About Us', key: 'about' },
   { to: '/services', label: 'Services', key: 'services', dropdown: true },
+  { to: '/portfolio', label: 'Portfolio', key: 'portfolio' },
   { to: '/blog', label: 'Blog', key: 'blog' },
   { to: '/academy', label: 'Academy', key: 'academy' },
-  { to: '/contact', label: 'Contact Us', key: 'contact' },
+  { to: '/#contact', label: 'Contact Us', key: 'contact' },
 ]
 
 export default function Header() {
   const [open, setOpen] = useState(false)
   const [ddOpen, setDdOpen] = useState(false)
-  const { pathname } = useLocation()
+  const { pathname, hash } = useLocation()
 
   const isActive = (l) => {
     if (l.key === 'home') return pathname === '/'
+    if (l.key === 'contact') return pathname === '/' && hash === '#contact'
+    if (l.key === 'portfolio') return pathname === '/portfolio'
     if (l.key === 'services') return pathname.startsWith('/services')
     return pathname === l.to
   }
@@ -94,7 +97,7 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-        <Link to="/contact" className="btn2 btn-q">Get A Quote</Link>
+        <Link to="/#contact" className="btn2 btn-q">Get A Quote</Link>
         <button className="mb2" aria-expanded={open} aria-controls="nav" onClick={() => setOpen(!open)}>
           <svg width="22" height="22" viewBox="0 0 22 22"><g stroke="#2E3192" strokeWidth="2.2" strokeLinecap="round"><path d="M3 6h16M3 11h16M3 16h16" /></g></svg>
         </button>

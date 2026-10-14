@@ -1,12 +1,11 @@
 import Hero from '../components/Hero.jsx'
-import Marquee from '../components/Marquee.jsx'
-import Clients from '../components/Clients.jsx'
 import About from '../components/About.jsx'
 import Services from '../components/Services.jsx'
+import Portfolio from '../components/Portfolio.jsx'
 import Process from '../components/Process.jsx'
 import Why from '../components/Why.jsx'
 import Voices from '../components/Voices.jsx'
-import CtaBand from '../components/CtaBand.jsx'
+import LatestBlog from '../components/LatestBlog.jsx'
 import Contact from '../components/Contact.jsx'
 import SEO from '../components/SEO.jsx'
 
@@ -41,14 +40,13 @@ export default function Home() {
         jsonLd={homeLd}
       />
       <Hero />
-      <Marquee />
-      <Clients />
       <About />
       <Services />
+      <Portfolio />
       <Process />
       <Why />
       <Voices />
-      <CtaBand />
+      <LatestBlog />
       <Contact />
     </main>
   )

@@ -125,7 +125,7 @@ export default function ServicesPage() {
               <h1 className="reveal">Eight ways we can grow your brand & build your digital presence</h1>
               <p className="reveal">Pick any service individually, or combine them into a 360° growth plan. Every engagement is run by real practitioners, with a single point of contact and transparent reporting.</p>
               <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }} className="reveal-zoom">
-                <Link to="/contact" className="btn btn-pink">Start with a free audit</Link>
+                <Link to="/#contact" className="btn btn-pink">Start with a free audit</Link>
                 <Link to="/about" className="btn btn-line">Meet the agency</Link>
               </div>
             </div>

@@ -12,7 +12,7 @@ const company = [
   { label: 'About us', to: '/about' },
   { label: 'Our services', to: '/services' },
   { label: 'Blog', to: '/blog' },
-  { label: 'Career', to: '/contact' },
+  { label: 'Career', to: '/#contact' },
   { label: 'Academy', to: '/academy' },
 ]
 const social = [
@@ -63,11 +63,11 @@ export default function Footer() {
       </div>
       <div className="wrap legal">
         <span>
-          <AppLink to="/contact">Support</AppLink>
+          <AppLink to="/#contact">Support</AppLink>
           {' | '}
-          <AppLink to="/contact">Privacy Policy</AppLink>
+          <AppLink to="/#contact">Privacy Policy</AppLink>
           {' | '}
-          <AppLink to="/contact">Terms &amp; Condition</AppLink>
+          <AppLink to="/#contact">Terms &amp; Condition</AppLink>
         </span>
         <span>Copyright © 2019-2026 Blix Technologies.</span>
       </div>

@@ -54,7 +54,7 @@ export default function Contact() {
             <input type="email" placeholder="Email address" aria-label="Email address" />
             <input className="full" type="tel" placeholder="Phone no." aria-label="Phone number" />
             <textarea className="full" placeholder="Message" aria-label="Message"></textarea>
-            <Link to="/contact" className="btn btn-line" style={{ gridColumn: '1 / -1', justifySelf: 'start' }}>
+            <Link to="/#contact" className="btn btn-line" style={{ gridColumn: '1 / -1', justifySelf: 'start' }}>
               Open full contact form →
             </Link>
             <p className={`ok-msg full${sent ? ' show' : ''}`} role="status">

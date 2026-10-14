@@ -58,7 +58,7 @@ export default function ServiceDetail() {
               <h1 className="reveal">{svc.title}</h1>
               <p className="reveal">{svc.text}</p>
               <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }} className="reveal-zoom">
-                <Link to="/contact" className="btn btn-pink">Get a custom quote</Link>
+                <Link to="/#contact" className="btn btn-pink">Get a custom quote</Link>
                 <Link to="/services" className="btn btn-line">See all services</Link>
               </div>
             </div>
@@ -123,7 +123,7 @@ export default function ServiceDetail() {
               <div className="sd-card reveal-zoom" style={{ background: 'linear-gradient(135deg,var(--magenta),#FF5CBE)' }}>
                 <h3>Ready to start?</h3>
                 <p>Book a free 30-minute consultation. We'll audit your current setup and recommend the best next steps — no hard sell.</p>
-                <Link to="/contact" className="btn btn-white" style={{ width: '100%', justifyContent: 'center', marginTop: 6 }}>Book free audit</Link>
+                <Link to="/#contact" className="btn btn-white" style={{ width: '100%', justifyContent: 'center', marginTop: 6 }}>Book free audit</Link>
               </div>
             </aside>
           </div>

@@ -28,7 +28,7 @@ export default function Why() {
           <span className="kicker reveal">Why Blix</span>
           <h2 className="h2 reveal">Why partner with Blix Technologies?</h2>
           <p className="reveal">Strategy, creativity and technology working together, with one dedicated contact for your account.</p>
-          <Link to="/contact" className="btn btn-pink reveal-zoom">Talk to our team</Link>
+          <Link to="/#contact" className="btn btn-pink reveal-zoom">Talk to our team</Link>
         </div>
         <div className="list reveal-stagger">
           {reasons.map((r) => (

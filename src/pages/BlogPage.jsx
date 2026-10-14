@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import SEO from '../components/SEO.jsx'
 
-const posts = [
+export const posts = [
   {
     tag: 'SEO',
+    image: '/campaign-planning.png',
     icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="10" cy="10" r="6" /><path d="M15 15l6 6" /></svg>),
     date: '28 Sep 2026',
     read: '6 min',
@@ -11,6 +13,7 @@ const posts = [
   },
   {
     tag: 'Paid Ads',
+    image: '/studio-session.png',
     icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 17l6-6 4 4 8-8M15 7h6v6" /></svg>),
     date: '22 Sep 2026',
     read: '8 min',
@@ -49,11 +52,22 @@ const posts = [
     title: 'The AI tools we actually use every month in a live digital agency',
     text: 'Not every AI tool sticks. Here are the ones still in our workflow after the hype cycle — for ad copy, SEO briefs, creative QA, reporting, and client delivery.',
   },
+  {
+    tag: 'Email Marketing',
+    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>),
+    date: '29 Sep 2026',
+    read: '6 min',
+    title: 'Welcome emails that turn new subscribers into engaged customers',
+    text: 'A useful welcome flow sets expectations, delivers the promised value, and gives readers one clear next step. Here is how to plan the first three emails and measure what earns attention.',
+  },
 ]
 
-const tags = ['SEO', 'Paid Ads', 'Social Media', 'Web Design', 'Branding', 'AI & Tools', 'Analytics', 'Email Marketing']
+const tags = ['SEO', 'Paid Ads', 'Social Media', 'Web Design', 'Branding', 'AI & Tools', 'Email Marketing']
 
 export default function BlogPage() {
+  const [activeTag, setActiveTag] = useState('')
+  const filteredPosts = activeTag ? posts.filter((post) => post.tag === activeTag) : posts
+
   const blogLd = [
     {
       id: 'blog',
@@ -91,12 +105,18 @@ export default function BlogPage() {
           <p className="about-lead reveal" style={{ maxWidth: '40em', margin: '18px auto 0' }}>
             Practical, non-fluffy writing from the team running campaigns every day. No frameworks without screenshots, no advice without results.
           </p>
-          <div className="blog-search reveal-zoom">
-            <input type="text" placeholder="Search articles, topics, keywords…" aria-label="Search blog" />
-            <button type="button">Search</button>
-          </div>
-          <div className="tag-cloud reveal-stagger">
-            {tags.map((t) => (<span key={t} className="tag-chip reveal">{t}</span>))}
+          <div className="tag-cloud reveal-stagger" role="group" aria-label="Filter articles by topic">
+            {tags.map((tag) => (
+              <button
+                key={tag}
+                type="button"
+                className={`tag-chip reveal${activeTag === tag ? ' active' : ''}`}
+                aria-pressed={activeTag === tag}
+                onClick={() => setActiveTag((currentTag) => currentTag === tag ? '' : tag)}
+              >
+                {tag}
+              </button>
+            ))}
           </div>
         </div>
       </section>
@@ -104,11 +124,12 @@ export default function BlogPage() {
       <section className="sd-body" style={{ paddingTop: 40 }}>
         <div className="wrap">
           <div className="blog-grid reveal-stagger">
-            {posts.map((p) => (
+            {filteredPosts.map((p) => (
               <article key={p.title} className="blog-card reveal-flip" data-vi="up" data-vi-speed="15">
                 <div className="blog-img">
+                  {p.image && <img className="blog-photo" src={p.image} alt="" loading="lazy" decoding="async" />}
                   <span className="b-tag">{p.tag}</span>
-                  <div className="blog-ic">{p.icon}</div>
+                  {!p.image && <div className="blog-ic">{p.icon}</div>}
                 </div>
                 <div className="blog-body">
                   <div className="blog-meta">
@@ -122,6 +143,9 @@ export default function BlogPage() {
                 </div>
               </article>
             ))}
+            {filteredPosts.length === 0 && (
+              <p className="blog-empty" role="status">No articles in {activeTag} yet. Choose another topic to keep browsing.</p>
+            )}
           </div>
         </div>
       </section>

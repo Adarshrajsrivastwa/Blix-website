@@ -17,7 +17,7 @@ export default function Voices() {
   return (
     <section className="voices" id="voices">
       <div className="wrap">
-        <span className="kicker reveal" style={{ color: '#FF7AC9' }}>Client's testimonial</span>
+        <span className="kicker reveal">Client's testimonial</span>
         <h2 className="h2 reveal">Reviews from our happy clients</h2>
         <p className="sub reveal">Your next big idea deserves our creative touch. Let's collaborate on bringing your next business vision to life.</p>
         <div className="vgrid reveal-stagger">

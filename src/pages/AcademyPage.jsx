@@ -112,8 +112,9 @@ export default function AcademyPage() {
         keywords="digital marketing course Noida, SEO training Delhi NCR, Google Ads course, Meta Ads certification, digital marketing academy India, AI marketing course, Blix Academy"
         jsonLd={acadLd}
       />
-      <div className="page-head">
-        <div className="wrap">
+      <div className="page-head academy-head">
+        <div className="wrap acad-hero-grid">
+          <div className="acad-hero-copy">
           <span className="kicker kicker-light reveal-blur">Blix Academy</span>
           <h1 className="reveal">Not Just a Course — A Job-Ready Digital Marketing + AI Program</h1>
           <p className="about-lead reveal">Backed by <b>Blix Technologies</b>, an award-winning agency with a Meta partner and Google-certified team, BLIX turns curious learners into confident digital marketers. We keep it practical, fast, and career-focused. There are no jargon marathons, just the real work.</p>
@@ -128,6 +129,12 @@ export default function AcademyPage() {
           <div className="hero-cta reveal-zoom">
             <AppLink className="btn btn-pink" to="#contact">Talk to an advisor</AppLink>
           </div>
+          </div>
+          <figure className="acad-hero-visual reveal-right">
+            <img src="/campaign-planning.png" alt="Digital marketing team planning a campaign" />
+            <figcaption><span>LEARN BY DOING</span><b>Build skills you can put to work.</b></figcaption>
+            <div className="acad-visual-badge"><b>12</b><span>week<br />program</span></div>
+          </figure>
         </div>
       </div>
 

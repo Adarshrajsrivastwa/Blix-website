@@ -8,7 +8,7 @@ export default function Process() {
   return (
     <section className="process">
       <div className="wrap">
-        <span className="kicker reveal" style={{ color: '#FF7AC9' }}>How we work</span>
+        <span className="kicker reveal">How we work</span>
         <h2 className="h2 reveal">Great experience, delivered quickly, with the best digital marketing</h2>
         <div className="steps reveal-stagger">
           {steps.map((s) => (
