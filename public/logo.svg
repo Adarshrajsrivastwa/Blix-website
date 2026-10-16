@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" width="500" height="200">
   <defs>
     <linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2E3192"/>
-      <stop offset="100%" stop-color="#EC008C"/>
+      <stop offset="0%" stop-color="#2E3191"/>
+      <stop offset="100%" stop-color="#2E3191"/>
     </linearGradient>
   </defs>
   <g transform="translate(10,20)">
     <rect width="84" height="84" rx="20" fill="url(#lg)"/>
     <text x="42" y="64" text-anchor="middle" font-family="Manrope,Segoe UI,sans-serif" font-weight="800" font-size="54" fill="white" letter-spacing="-2">B</text>
   </g>
-  <text x="118" y="64" font-family="Manrope,Segoe UI,sans-serif" font-weight="800" font-size="50" fill="#2E3192" letter-spacing="2">BLIX</text>
+  <text x="118" y="64" font-family="Manrope,Segoe UI,sans-serif" font-weight="800" font-size="50" fill="#2E3191" letter-spacing="2">BLIX</text>
   <text x="118" y="96" font-family="Inter,Segoe UI,sans-serif" font-weight="400" font-size="22" fill="#5B5D8A" letter-spacing="3.2">TECHNOLOGIES</text>
 </svg>

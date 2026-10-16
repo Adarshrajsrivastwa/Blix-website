@@ -1,5 +1,6 @@
 import Hero from '../components/Hero.jsx'
 import About from '../components/About.jsx'
+import Clients from '../components/Clients.jsx'
 import Services from '../components/Services.jsx'
 import Portfolio from '../components/Portfolio.jsx'
 import Process from '../components/Process.jsx'
@@ -7,10 +8,46 @@ import Why from '../components/Why.jsx'
 import Voices from '../components/Voices.jsx'
 import LatestBlog from '../components/LatestBlog.jsx'
 import Contact from '../components/Contact.jsx'
+import FeaturedWith from '../components/FeaturedWith.jsx'
+import HomeFaq from '../components/HomeFaq.jsx'
 import SEO from '../components/SEO.jsx'
 
 export default function Home() {
   const homeLd = [
+    {
+      id: 'home-faq',
+      data: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What digital marketing services does Blix Technologies offer?',
+            acceptedAnswer: { '@type': 'Answer', text: 'We offer SEO, search and social advertising, social media marketing, personal branding, online reputation management, and web, app, and software development.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can you create a strategy tailored to my business?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Yes. We start by understanding your business, audience, goals, and current marketing, then recommend a plan suited to your needs.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'How soon should I expect to see results?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Timing depends on the service, competition, budget, and starting point. Paid campaigns can generate early data, while SEO and other longer-term work take time to build. We’ll agree on suitable measures and review progress with you.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Do you work with businesses outside Noida?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Yes. We’re based in Noida and work with businesses across India and in international markets.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'How can I get started?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Use the contact form below to tell us about your business and what you’re looking to achieve. Our team can discuss the right next steps with you.' },
+          },
+        ],
+      },
+    },
     {
       id: 'services-list',
       data: {
@@ -40,6 +77,7 @@ export default function Home() {
         jsonLd={homeLd}
       />
       <Hero />
+      <Clients />
       <About />
       <Services />
       <Portfolio />
@@ -47,6 +85,8 @@ export default function Home() {
       <Why />
       <Voices />
       <LatestBlog />
+      <HomeFaq />
+      <FeaturedWith />
       <Contact />
     </main>
   )

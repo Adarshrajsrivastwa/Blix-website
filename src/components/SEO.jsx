@@ -74,7 +74,7 @@ export default function SEO({
     setMeta('name', 'robots', noindex ? 'noindex,nofollow' : 'index,follow')
     setMeta('name', 'author', SITE_NAME)
     setMeta('name', 'viewport', 'width=device-width, initial-scale=1, viewport-fit=cover')
-    setMeta('name', 'theme-color', '#2E3192')
+    setMeta('name', 'theme-color', '#2E3191')
 
     setLink('canonical', canonical)
 

@@ -120,7 +120,7 @@ export default function ServiceDetail() {
                 </ul>
               </div>
 
-              <div className="sd-card reveal-zoom" style={{ background: 'linear-gradient(135deg,var(--magenta),#FF5CBE)' }}>
+              <div className="sd-card reveal-zoom" style={{ background: 'linear-gradient(135deg,var(--magenta),#2E3191)' }}>
                 <h3>Ready to start?</h3>
                 <p>Book a free 30-minute consultation. We'll audit your current setup and recommend the best next steps — no hard sell.</p>
                 <Link to="/#contact" className="btn btn-white" style={{ width: '100%', justifyContent: 'center', marginTop: 6 }}>Book free audit</Link>
