@@ -40,23 +40,7 @@ export default function Header() {
     <header className="hdr">
       <div className="bar2">
         <AppLink className="logo2" to="/" aria-label="Blix Technologies home">
-          <svg width="160" height="56" viewBox="0 0 160 56" aria-hidden="true">
-            <defs>
-              <linearGradient id="logoG" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stopColor="#2E3191" />
-                <stop offset=".6" stopColor="#2E3191" />
-                <stop offset="1" stopColor="#2E3191" />
-              </linearGradient>
-            </defs>
-            <g>
-              <path d="M12 5C7 5 3 9 3 15v10c0 5 4 10 9 10h6C23 35 27 31 27 26V25H17c-2 0-3-1-3-3V16c0-2 1-3 3-3h10V15C27 9 23 5 18 5h-6z" fill="url(#logoG)" />
-            </g>
-            <g fontFamily="'Bricolage Grotesque','Segoe UI',sans-serif" fontWeight="800">
-              <text x="36" y="32" fontSize="34" fill="#2E3191" letterSpacing="-1">LIX</text>
-              <text x="10" y="51" fontSize="10" fill="#5C5C7D" letterSpacing="2.4" fontWeight="600">technologies</text>
-            </g>
-            <circle cx="98" cy="9" r="2.8" fill="#2E3191" />
-          </svg>
+          <img className="brand-logo" src="/blix-gradient-logo.png" alt="Blix Technologies" />
         </AppLink>
         <nav id="nav" className={open ? 'open' : ''} aria-label="Main">
           <ul onClick={() => { setOpen(false); setDdOpen(false) }}>

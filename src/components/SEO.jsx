@@ -104,7 +104,7 @@ export default function SEO({
       url: SITE_URL,
       logo: {
         '@type': 'ImageObject',
-        url: `${SITE_URL}/logo.svg`,
+        url: `${SITE_URL}/blix-gradient-logo.png`,
         width: 500,
         height: 200,
       },
