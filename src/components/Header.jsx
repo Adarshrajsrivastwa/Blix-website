@@ -6,10 +6,11 @@ const serviceLinks = [
   { to: '/services/digital-marketing', label: '360 Digital Marketing' },
   { to: '/services/seo', label: 'SEO Services' },
   { to: '/services/social-media', label: 'Social Media Services' },
+  { to: '/services/real-estate-marketing', label: 'Real Estate Marketing' },
+  { to: '/services/orm', label: 'Online Reputation Management' },
   { to: '/services/personal-branding', label: 'Personal Branding' },
   { to: '/services/web-development', label: 'Web Development' },
-  { to: '/services/orm', label: 'Online Reputation Management' },
-  { to: '/services/app-development', label: 'App Development' },
+  { to: '/services/app-development', label: 'Mobile App Development' },
   { to: '/services/software-development', label: 'Software Development' },
 ]
 
@@ -19,7 +20,6 @@ const links = [
   { to: '/services', label: 'Services', key: 'services', dropdown: true },
   { to: '/portfolio', label: 'Portfolio', key: 'portfolio' },
   { to: '/blog', label: 'Blog', key: 'blog' },
-  { to: '/academy', label: 'Academy', key: 'academy' },
   { to: '/#contact', label: 'Contact Us', key: 'contact' },
 ]
 

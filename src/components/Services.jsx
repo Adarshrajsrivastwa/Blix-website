@@ -23,8 +23,22 @@ const services = [
     icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="16" rx="3" /><path d="M8 10h8M8 14h5" /></svg>),
   },
   {
-    slug: 'personal-branding',
+    slug: 'real-estate-marketing',
     cls: 't4',
+    title: 'Real Estate Marketing',
+    text: 'Reach property buyers and tenants with focused campaigns, listing content, local search, and clear lead follow-up.',
+    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 10.5L12 3l9 7.5" /><path d="M5 9v12h14V9M9 21v-7h6v7" /></svg>),
+  },
+  {
+    slug: 'orm',
+    cls: 't5',
+    title: 'Online Reputation Management',
+    text: 'Own page one of Google. Suppress negatives, amplify positives, and protect your brand search results.',
+    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V5z" /><path d="M9 12l2 2 4-4" /></svg>),
+  },
+  {
+    slug: 'personal-branding',
+    cls: 't6',
     title: 'Personal Branding',
     text: 'Founder and executive personal branding — narrative, content, and LinkedIn/YouTube engine that opens real doors.',
     icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4 4-7 8-7s8 3 8 7" /></svg>),
@@ -37,16 +51,9 @@ const services = [
     icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="12" rx="2" /><path d="M8 20h8M12 16v4" /></svg>),
   },
   {
-    slug: 'orm',
-    cls: 't6',
-    title: 'Online Reputation Management',
-    text: 'Own page one of Google. Suppress negatives, amplify positives, and protect your brand search results.',
-    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V5z" /><path d="M9 12l2 2 4-4" /></svg>),
-  },
-  {
     slug: 'app-development',
     cls: 't4',
-    title: 'App Development',
+    title: 'Mobile App Development',
     text: 'Android and iOS apps — React Native or native — designed for real users, shipped on time and on budget.',
     icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="7" y="2" width="10" height="20" rx="2" /><path d="M11 18h2" /></svg>),
   },
@@ -76,7 +83,7 @@ export default function Services() {
         <div className="bento reveal-stagger">
           {services.map((s) => (
             <Link
-              key={s.cls}
+              key={s.slug}
               to={`/services/${s.slug}`}
               className={`tile ${s.cls} reveal-flip`}
               style={{ textDecoration: 'none', color: 'inherit' }}

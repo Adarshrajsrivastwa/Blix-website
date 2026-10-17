@@ -34,8 +34,28 @@ const services = [
     deliverable: 'A social media presence that grows followers, deepens engagement, and reliably sends qualified leads to your sales team.',
   },
   {
-    slug: 'personal-branding',
+    slug: 'real-estate-marketing',
     cls: 't4',
+    title: 'Real Estate Marketing',
+    short: 'Property marketing that brings listings, projects, and local audiences together.',
+    text: 'We help real estate developers, agents, and property teams present projects clearly and reach relevant buyers and tenants. A coordinated plan can combine project landing pages, local search visibility, property content, and paid campaigns, with lead tracking and follow-up built into the process.',
+    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 10.5L12 3l9 7.5" /><path d="M5 9v12h14V9M9 21v-7h6v7" /></svg>),
+    bullets: ['Audience, location & property keyword research', 'Project landing pages and enquiry forms', 'Google and social campaign planning', 'Local SEO and property listing support', 'Property photography, reels & content planning', 'Lead tracking and CRM follow-up setup'],
+    deliverable: 'A connected property marketing system that presents each project clearly, makes enquiries easier, and tracks campaign activity from first click to follow-up.',
+  },
+  {
+    slug: 'orm',
+    cls: 't5',
+    title: 'Online Reputation Management',
+    short: 'Own page one of Google for your brand — and keep it clean.',
+    text: 'ORM programs that suppress negative links, amplify positive content, build branded assets, and protect your search results. For founders, executives, hospitals, real estate, and consumer brands.',
+    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V5z" /><path d="M9 12l2 2 4-4" /></svg>),
+    bullets: ['Branded SERP audit & strategy', 'Suppression of negative results', 'Positive content & PR amplification', 'Review generation & response', 'Crisis response support', 'Monthly SERP monitoring'],
+    deliverable: 'A clean, controlled page one of Google — so when someone searches you, they see exactly the story you want told.',
+  },
+  {
+    slug: 'personal-branding',
+    cls: 't6',
     title: 'Personal Branding',
     short: 'Build a founder / executive brand that opens doors, not just profiles.',
     text: 'Personal branding for founders, CXOs, coaches, and subject-matter experts. We craft your narrative, design your content engine, publish across LinkedIn / X / YouTube, and turn your personal brand into a company asset.',
@@ -54,19 +74,9 @@ const services = [
     deliverable: 'A fast, beautiful, conversion-ready website that builds trust and grows revenue around the clock.',
   },
   {
-    slug: 'orm',
-    cls: 't6',
-    title: 'Online Reputation Management',
-    short: 'Own page one of Google for your brand — and keep it clean.',
-    text: 'ORM programs that suppress negative links, amplify positive content, build branded assets, and protect your search results. For founders, executives, hospitals, real estate, and consumer brands.',
-    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V5z" /><path d="M9 12l2 2 4-4" /></svg>),
-    bullets: ['Branded SERP audit & strategy', 'Suppression of negative results', 'Positive content & PR amplification', 'Review generation & response', 'Crisis response support', 'Monthly SERP monitoring'],
-    deliverable: 'A clean, controlled page one of Google — so when someone searches you, they see exactly the story you want told.',
-  },
-  {
     slug: 'app-development',
     cls: 't4',
-    title: 'App Development',
+    title: 'Mobile App Development',
     short: 'Android & iOS apps that feel premium, perform fast, and retain users.',
     text: 'Mobile apps built around how real users actually use their phones. From UX wireframes and prototypes to launch and post-launch support. React Native, native Android (Kotlin) and native iOS (Swift).',
     icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="7" y="2" width="10" height="20" rx="2" /><path d="M11 18h2" /></svg>),
@@ -95,7 +105,7 @@ export default function ServicesPage() {
         serviceType: 'Digital Marketing Services',
         provider: { '@type': 'Organization', name: 'Blix Technologies' },
         areaServed: 'IN,US,UK,CA,AE,SG,AU',
-        description: 'SEO, social media marketing, paid ads, web development, app development, ORM, personal branding, and 360° digital marketing from a Noida-based agency.',
+        description: 'Digital marketing, SEO, social media, real estate marketing, online reputation management, personal branding, web development, mobile app development, and software development from a Noida-based agency.',
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
           name: 'Blix Technologies Service Catalog',
@@ -113,8 +123,8 @@ export default function ServicesPage() {
     <main id="top">
       <SEO
         title="Digital Marketing Services | SEO, SMM, Web & App Development"
-        description="Explore Blix Technologies' full-service digital marketing offerings: SEO, social media, Google Ads, personal branding, web development, mobile apps, ORM, and custom software — Noida, India."
-        keywords="SEO services Noida, social media marketing agency, web development Noida, mobile app development, ORM services, personal branding agency, 360 digital marketing, Google Ads management"
+        description="Explore Blix Technologies' services: digital marketing, SEO, social media, real estate marketing, online reputation management, personal branding, web and mobile app development, and custom software — Noida, India."
+        keywords="SEO services Noida, social media marketing agency, real estate marketing, web development Noida, mobile app development, ORM services, personal branding agency, 360 digital marketing, Google Ads management"
         jsonLd={servicesLd}
       />
       <section className="sd-head">
@@ -122,7 +132,7 @@ export default function ServicesPage() {
           <div className="sd-hero">
             <div>
               <span className="kicker reveal-blur">Our services</span>
-              <h1 className="reveal">Eight ways we can grow your brand & build your digital presence</h1>
+              <h1 className="reveal">Nine ways we can grow your brand & build your digital presence</h1>
               <p className="reveal">Pick any service individually, or combine them into a 360° growth plan. Every engagement is run by real practitioners, with a single point of contact and transparent reporting.</p>
               <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }} className="reveal-zoom">
                 <Link to="/#contact" className="btn btn-pink">Start with a free audit</Link>

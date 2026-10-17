@@ -16,7 +16,7 @@ function LogoSet({ duplicate = false }) {
     <div className="client-logo-set" aria-hidden={duplicate || undefined}>
       {clients.map(({ name, src }) => (
         <div className="client-logo" key={name}>
-          <img src={`/client-logos/${src}`} alt={duplicate ? '' : name} />
+          <img src={`/client-logos-clean/${src}`} alt={duplicate ? '' : name} />
         </div>
       ))}
     </div>

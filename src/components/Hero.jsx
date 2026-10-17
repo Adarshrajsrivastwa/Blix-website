@@ -14,7 +14,7 @@ export default function Hero() {
     <section className="hero">
       <div className="wrap hero-grid">
         <div className="hero-copy">
-          <span className="pill2"><i />Digital marketing & technology · Noida, India</span>
+          <span className="pill2"><i />AI digital marketing & technology · Noida, India</span>
           <h1>
             Good marketing starts with <em>a clear direction.</em>
           </h1>
