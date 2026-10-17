@@ -988,7 +988,7 @@ p{max-width:68ch}
 .faq-q{width:100%;min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:12px;border:0;background:none;padding:13px 0;text-align:left;color:#192437;font:700 14px/1.4 var(--body);cursor:pointer}
 .faq-q i{width:24px;height:24px;flex:none;display:grid;place-items:center;border-radius:50%;background:#edf3ff;color:#2e3191;font:500 20px/1 var(--body);transition:transform .2s}
 .faq-a{padding:0 28px 15px 0;color:#596477;font-size:13px;line-height:1.6}
-.home-faq{padding:84px 0;background:linear-gradient(180deg,#f5f7fb 0%,#fff 100%)}
+.home-faq{padding:48px 0 72px;background:linear-gradient(180deg,#f5f7fb 0%,#fff 100%)}
 .home-faq .wrap{max-width:950px}
 .home-faq-head{max-width:680px;margin:0 auto 32px;text-align:center}
 .home-faq-head .kicker{margin-bottom:9px}
@@ -1001,12 +1001,12 @@ p{max-width:68ch}
 .home-faq .faq-q i{transition:transform .2s ease}
 .home-faq .faq-q i.is-open{transform:rotate(45deg)}
 .home-faq .faq-a{max-width:760px;padding:0 42px 20px 0;font-size:14px;line-height:1.7}
-.home-faq-contact{margin-top:24px;text-align:center;color:#596477;font-size:14px}
+.home-faq-contact{margin-top:24px;text-align:left;color:#596477;font-size:14px}
 .home-faq-contact a{margin-left:5px;color:#2e3191;font-weight:700}
 .home-faq-contact a:hover{color:#2e3191}
 .home-faq-contact a span{display:inline-block;transition:transform .2s ease}
 .home-faq-contact a:hover span{transform:translateX(4px)}
-@media(max-width:700px){.home-faq{padding:54px 0}.home-faq-head{margin-bottom:22px}.home-faq .faq-item{padding-inline:16px}.home-faq .faq-q{min-height:58px;font-size:14px}.home-faq .faq-a{padding-right:10px;font-size:13px}}
+@media(max-width:700px){.home-faq{padding:36px 0 48px}.home-faq-head{margin-bottom:22px}.home-faq .faq-item{padding-inline:16px}.home-faq .faq-q{min-height:58px;font-size:14px}.home-faq .faq-a{padding-right:10px;font-size:13px}}
 .acad-section>.wrap>.fees{display:grid;grid-template-columns:1fr .7fr;gap:22px;align-items:center;padding:clamp(24px,4vw,38px);border-radius:16px;background:#edf3ff;border:1px solid #d7e4ff}
 .fees h3{color:#162238;font-size:clamp(24px,3vw,32px)}
 .fees p{margin-top:8px;color:#536075;font-size:14px}
@@ -1041,7 +1041,7 @@ p{max-width:68ch}
 
 /* Brand blue links; all depth effects use existing cards and visuals. */
 .services .tile{transform-style:preserve-3d;perspective:1000px;transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
-.services .tile .go{color:#2E3191;transition:color .2s ease,gap .2s ease,transform .28s ease}
+.services .tile .go{color:#ec4899;transition:color .2s ease,gap .2s ease,transform .28s ease}
 .services .tile:hover .go{color:#ec4899;transform:translateZ(12px)}
 
 /* Home agency intro: a clean photo panel with a compact caption card. */
@@ -1264,8 +1264,59 @@ footer .soc a:not(.btn):not(.btn2):not(.logo2),footer .soc a:not(.btn):not(.btn2
 .contact-details .contact-value a{text-decoration-color:rgba(255,255,255,.55)}
 
 /* Keep the contact card copy white; preserve its icon styling. */
-.card-info,.card-info div,.card-info h3,.card-info a,.card-info a:hover{color:#fff}
+.card-info,.card-info div,.card-info span,.card-info h3,.card-info a,.card-info a:hover{color:#fff!important}
+.card-info svg{color:#EC008C}
 
 /* Text links turn pink on hover; body copy, buttons, logos, and social icons do not. */
 a:not(.btn):not(.btn2):not(.logo2):not(.soc a):hover{color:#ec008c!important}
 .soc a:hover{color:#fff!important}
+
+/* Process steps: keep each hover effect inside its own column. */
+.steps{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
+.st{min-width:0;position:relative;transform:none}
+.st::before{display:none}
+.st-mark{display:flex;align-items:center;gap:12px;margin:0 0 18px;color:#2E3191}
+.st-number{display:grid;place-items:center;width:34px;height:34px;border:1px solid #D8DDF0;border-radius:50%;background:#fff;color:#2E3191}
+.st-number::before{counter-increment:s;content:counter(s);font:700 13px var(--body)}
+.st-icon{width:42px;height:42px;padding:10px;border-radius:12px;background:#EAF0FF;color:#2E3191;transition:transform .25s ease,background .25s ease,color .25s ease}
+.st h3{margin-bottom:10px}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){.st:hover{transform:none;box-shadow:none;background:transparent;border-color:#DCE2EA}.st:hover .st-icon{transform:translateY(-3px);background:#2E3191;color:#fff}}
+@media(max-width:700px){.steps{grid-template-columns:minmax(0,1fr)}.st{padding:22px 0}}
+
+/* Give each Why Blix benefit a clear, subject-specific line icon. */
+.row .reason-icon{width:42px;height:42px;padding:9px;border:1px solid #DCE2F2;border-radius:50%;background:#F3F6FF;color:#2E3191}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){.row:hover .reason-icon{background:#2E3191;color:#fff;border-color:#2E3191}}
+
+/* Refresh the process section with a cleaner, more polished card system. */
+.process{padding:88px 0;background:radial-gradient(ellipse at 12% 0%,rgba(46,49,145,.055),transparent 38%),#F5F7FA}
+.process .kicker{display:inline-flex;align-items:center;gap:10px;margin-bottom:14px;color:#2E3191;font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.process .kicker::before{content:"";width:22px;height:2px;border-radius:2px;background:#2E3191}
+.process .h2{max-width:18ch;font-size:clamp(32px,4vw,48px);letter-spacing:-.045em;line-height:1.08}
+.steps{gap:18px;margin-top:40px;border:0;counter-reset:s}
+.st{padding:30px 26px 28px;border:1px solid #E1E6F0;border-radius:18px;background:rgba(255,255,255,.88);box-shadow:0 8px 24px rgba(20,35,70,.035);backdrop-filter:none;transition:transform .28s cubic-bezier(.2,.8,.2,1),border-color .28s ease,box-shadow .28s ease}
+.st-mark{width:54px;height:54px;position:relative;display:block;margin-bottom:24px}
+.st-icon{display:block;width:54px;height:54px;padding:14px;border:1px solid #DCE5FF;border-radius:16px;background:linear-gradient(145deg,#F4F7FF,#E9EFFF);color:#30358E;filter:drop-shadow(0 5px 8px rgba(46,49,145,.08));transition:transform .28s cubic-bezier(.2,.8,.2,1),background .28s ease,color .28s ease,box-shadow .28s ease}
+.st-number{position:absolute;z-index:1;right:-9px;bottom:-7px;width:25px;height:25px;border:2px solid #fff;border-radius:50%;background:#30358E;color:#fff;box-shadow:0 3px 9px rgba(46,49,145,.2)}
+.st-number::before{font:800 11px var(--body)}
+.st h3{font-size:20px;letter-spacing:-.025em;line-height:1.25}
+.st p{max-width:36ch;color:#596477;font-size:15px;line-height:1.7}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){.st:hover{transform:translateY(-4px);border-color:#C9D4F6;box-shadow:0 16px 32px rgba(30,42,100,.09);background:#fff}.st:hover .st-icon{transform:translateY(-2px);background:linear-gradient(145deg,#3940A8,#292E85);color:#fff;box-shadow:0 8px 16px rgba(46,49,145,.22)}}
+@media(max-width:700px){.process{padding:58px 0}.steps{gap:12px;margin-top:28px}.st{padding:24px 20px}.st-mark{margin-bottom:20px}.process .h2{max-width:19ch}}
+
+/* Keep the footer service directory compact and aligned with the other columns. */
+footer .fg>div:nth-child(2) ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 20px}
+footer .fg>div:nth-child(2) li{min-width:0;line-height:1.45}
+footer .fg>div:nth-child(2) a{display:block}
+@media(max-width:420px){footer .fg>div:nth-child(2) ul{grid-template-columns:1fr;gap:8px}}
+
+/* Shared icon language: crisp strokes, soft brand surfaces, and real social marks. */
+svg[viewBox="0 0 24 24"]{stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ic{display:grid;place-items:center;border:1px solid #E4E8F7;border-radius:14px;background:linear-gradient(145deg,#F7F8FF,#EEF1FF);color:#30358E;box-shadow:0 5px 12px rgba(46,49,145,.07)}
+.ic svg{width:24px;height:24px;overflow:visible}
+.t1 .ic,.t3 .ic{background:#EFF4FF;color:#30358E;border-color:#E4E8F7}
+.soc a svg{display:block;width:19px;height:19px;overflow:visible}
+.card-info svg{width:42px;height:42px;padding:10px;margin-top:0;border:1px solid rgba(236,0,140,.24);border-radius:13px;background:rgba(236,0,140,.11);color:#EC008C}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  .ic{transition:transform .25s ease,background .25s ease,border-color .25s ease,box-shadow .25s ease}
+  .tile:hover .ic,.vm-card:hover .ic,.cinfo:hover .ic,.trend:hover .ic,.learn:hover .ic{transform:translateY(-2px);border-color:#D4D9FA;box-shadow:0 9px 18px rgba(46,49,145,.12)}
+}

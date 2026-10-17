@@ -86,8 +86,8 @@ export default function Home() {
       <Why />
       <Voices />
       <LatestBlog />
-      <HomeFaq />
       <FeaturedWith />
+      <HomeFaq />
       <Contact />
     </main>
   )

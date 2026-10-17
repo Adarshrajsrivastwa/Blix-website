@@ -4,7 +4,7 @@ const publications = [
   { name: 'Trustpilot', src: 'trustpilot.png' },
   { name: 'Justdial', src: 'justdial.png' },
   { name: 'Dailyhunt', src: 'dailyhunt.png' },
-  { name: 'IndiaMART', src: 'indiamart.png' },
+  { name: 'IndiaMART', src: 'indiamart-clean.png' },
 ]
 
 function LogoSet({ duplicate = false }) {
