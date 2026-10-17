@@ -1320,3 +1320,121 @@ svg[viewBox="0 0 24 24"]{stroke-width:1.8;stroke-linecap:round;stroke-linejoin:r
   .ic{transition:transform .25s ease,background .25s ease,border-color .25s ease,box-shadow .25s ease}
   .tile:hover .ic,.vm-card:hover .ic,.cinfo:hover .ic,.trend:hover .ic,.learn:hover .ic{transform:translateY(-2px);border-color:#D4D9FA;box-shadow:0 9px 18px rgba(46,49,145,.12)}
 }
+
+/* Client testimonials: photo-led quote cards on the brand indigo field. */
+.voices{position:relative;overflow:hidden;background:linear-gradient(150deg,#30358E 0%,#25286F 100%);color:#fff}
+.voices::before{display:block;inset:0;background:radial-gradient(circle at 5% 5%,rgba(255,255,255,.08),transparent 26%),radial-gradient(circle at 100% 100%,rgba(236,0,140,.12),transparent 28%)}
+.voices .kicker{color:#FFD9EB}
+.voices .h2{color:#fff}
+.voices .sub{color:rgba(255,255,255,.78)}
+.voices .vgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:46px}
+.voices .q{min-width:0;align-self:stretch;padding:34px 28px 28px;border:1px solid rgba(255,255,255,.68);border-radius:15px;background:#fff;color:#20283A;box-shadow:0 16px 38px rgba(14,18,62,.16);transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+.voices .q::before{content:"”";top:-20px;left:calc(50% - 21px);display:grid;place-items:center;width:42px;height:42px;border:2px solid #EC008C;border-radius:50%;background:#fff;color:#EC008C;font:800 42px/.95 Georgia,serif;text-shadow:none}
+.q-layout{display:grid;grid-template-columns:104px minmax(0,1fr);align-items:start;gap:25px}
+.q-photo{display:block;width:104px;height:104px;object-fit:cover;border:3px solid #F0F2FA;border-radius:50%;background:#F2F4F8}
+.q-copy{min-width:0;padding-top:2px}
+.voices .q blockquote{margin:0;color:#394253;font-size:15px;line-height:1.62}
+.voices .who{display:flex;flex-direction:column;align-items:flex-start;gap:3px;margin-top:22px}
+.voices .who b{color:#30358E;font-size:15px;font-weight:800}
+.voices .who span{color:#EC008C;font-size:14px;font-weight:500;letter-spacing:0}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){.voices .q:hover{transform:translateY(-4px);box-shadow:0 22px 46px rgba(14,18,62,.23);border-color:#fff}}
+@media(max-width:900px){.voices .vgrid{grid-template-columns:minmax(0,1fr);gap:24px}}
+@media(max-width:560px){.voices .vgrid{margin-top:34px;gap:22px}.voices .q{padding:30px 20px 22px}.q-layout{grid-template-columns:68px minmax(0,1fr);gap:16px}.q-photo{width:68px;height:68px;border-width:2px}.voices .q blockquote{font-size:14px}.voices .who{margin-top:16px}}
+
+/* Interactive testimonial slider controls and touch-friendly snapping. */
+.voices .v-carousel{position:relative;z-index:2;margin-top:46px}
+.voices .vgrid{display:flex;gap:22px;margin:0;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;scrollbar-width:none;-ms-overflow-style:none;outline:none}
+.voices .vgrid::-webkit-scrollbar{display:none}
+.voices .vgrid:focus-visible{outline:2px solid #FF8BC9;outline-offset:5px;border-radius:14px}
+.v-slide{flex:0 0 100%;min-width:0;scroll-snap-align:start;scroll-snap-stop:always}
+.voices .q{width:100%;max-width:1060px;min-height:250px;margin-inline:auto}
+.voices-controls{display:flex;align-items:center;justify-content:center;gap:20px;margin-top:26px}
+.v-arrow{display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(255,255,255,.28);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;cursor:pointer;transition:background .2s ease,border-color .2s ease,transform .2s ease,opacity .2s ease}
+.v-arrow svg{width:20px;height:20px}
+.v-arrow:hover:not(:disabled){transform:translateY(-2px);border-color:#EC008C;background:#EC008C}
+.v-arrow:disabled{opacity:.38;cursor:default}
+.v-dots{display:flex;align-items:center;justify-content:center;gap:9px}
+.v-dots button{width:8px;height:8px;padding:0;border:0;border-radius:99px;background:rgba(255,255,255,.48);cursor:pointer;transition:width .22s ease,background .22s ease}
+.v-dots button[aria-current="true"]{width:24px;background:#EC008C}
+.v-dots button:focus-visible,.v-arrow:focus-visible{outline:2px solid #fff;outline-offset:3px}
+@media(max-width:560px){.voices .v-carousel{margin-top:34px}.voices .q{min-height:320px}.voices-controls{margin-top:20px;gap:16px}}
+@media(prefers-reduced-motion:reduce){.voices .vgrid{scroll-behavior:auto}.v-arrow,.v-dots button{transition:none}}
+
+/* Footer spacing and column proportions for a shorter, cleaner finish. */
+footer .fg{grid-template-columns:minmax(0,1.1fr) minmax(0,1.8fr) minmax(0,.7fr) minmax(0,1.4fr);gap:30px;padding:56px 0 34px}
+footer .fg>div>h3{margin-bottom:14px}
+footer .fg>div:nth-child(2) ul{gap:8px 24px}
+footer .fg>div:nth-child(2) li{font-size:14px;line-height:1.35}
+footer .soc{gap:12px;padding:18px 0}
+footer .soc a{width:42px;height:42px}
+footer .legal{padding:18px 0}
+@media(max-width:1080px){footer .fg{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 34px}}
+@media(max-width:760px){footer .fg{grid-template-columns:minmax(0,1fr);gap:24px;padding:38px 0 26px}}
+@media(max-width:420px){footer .fg>div:nth-child(2) ul{grid-template-columns:minmax(0,1fr)}}
+
+/* Home contact section: clearer hierarchy and matched information/form panels. */
+.contact{padding:84px 0 92px;background:linear-gradient(180deg,#F5F7FB 0%,#fff 100%)}
+.contact-home-head{max-width:690px;margin:0 0 30px}
+.contact-home-head .kicker{display:inline-flex;margin-bottom:10px;color:#30358E}
+.contact-home-head .h2{font-size:clamp(34px,4vw,48px);line-height:1.05;letter-spacing:-.045em}
+.contact-home-head>p{max-width:58ch;margin-top:12px;color:#5B6575;font-size:16px;line-height:1.65}
+.contact .grid{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);align-items:stretch;gap:22px;margin-top:0}
+.contact .card-info{display:flex;flex-direction:column;gap:0;min-width:0;padding:clamp(26px,3vw,40px);border:1px solid rgba(255,255,255,.08);border-radius:22px;background:radial-gradient(circle at 100% 0%,rgba(67,76,190,.36),transparent 35%),linear-gradient(145deg,#152642,#0E1A30 76%);box-shadow:0 20px 48px rgba(13,27,54,.14)}
+.contact .card-info::before{top:auto;right:-90px;bottom:-130px;width:280px;height:280px;background:radial-gradient(circle,rgba(236,0,140,.24),transparent 65%);opacity:1}
+.contact-home-card-head{position:relative;z-index:2;display:block!important;margin-bottom:28px;color:#fff!important}
+.contact-home-card-head>span,.contact-home-form-head>span{display:block;color:#EC75B8;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.contact-home-card-head h3{margin:8px 0;color:#fff;font-size:clamp(22px,2.4vw,28px);letter-spacing:-.03em}
+.contact-home-card-head p{max-width:38ch;color:#C6D0E0;font-size:13px;line-height:1.6}
+.contact .card-info .contact-home-list{position:relative;z-index:2;display:grid;gap:20px}
+.contact .card-info .contact-home-list:hover,.contact .card-info .contact-home-card-head:hover{transform:none}
+.contact .card-info .contact-home-item{display:grid;grid-template-columns:42px minmax(0,1fr);align-items:start;gap:14px;min-width:0;color:#fff!important;transition:transform .22s ease}
+.contact .card-info .contact-home-item:hover{transform:translateX(3px)}
+.contact .card-info .contact-home-item>svg{width:42px;height:42px;margin:0;padding:10px;border:1px solid rgba(236,0,140,.23);border-radius:13px;background:rgba(236,0,140,.12);color:#FF36A7}
+.contact .card-info .contact-home-item>span{min-width:0;display:block;color:#fff!important}
+.contact .card-info .contact-home-item h3{margin:1px 0 4px;color:#fff;font-size:15px;font-weight:750}
+.contact .card-info .contact-home-item a,.contact .card-info .contact-home-item span:not(:first-child){color:#E6EAF2!important;font-size:14px;line-height:1.6;overflow-wrap:anywhere}
+.contact .card-info .contact-home-item a:hover{color:#fff!important;text-decoration:underline;text-decoration-color:#EC75B8;text-underline-offset:3px}
+.contact form{align-content:start;gap:14px;min-width:0;padding:clamp(26px,3.2vw,42px);border:1px solid #E1E6F0;border-radius:22px;background:#fff;box-shadow:0 16px 42px rgba(26,39,75,.055)}
+.contact-home-form-head{margin-bottom:6px}
+.contact-home-form-head>span{color:#30358E}
+.contact-home-form-head h3{margin-top:7px;color:#202A3A;font-size:clamp(21px,2.2vw,27px);letter-spacing:-.03em}
+.contact-home-form-head p{margin-top:6px;color:#667085;font-size:13px;line-height:1.55}
+.contact form input,.contact form textarea{width:100%;min-width:0;border:1px solid #DCE2ED;border-radius:10px;background:#F9FAFD;padding:14px 15px;color:#202A3A;font:400 14px/1.5 var(--body);transition:border-color .18s ease,box-shadow .18s ease,background .18s ease}
+.contact form input{height:50px}
+.contact form textarea{min-height:132px;resize:vertical}
+.contact form input::placeholder,.contact form textarea::placeholder{color:#9099A8}
+.contact form input:focus,.contact form textarea:focus{outline:none;border-color:#565BCC;background:#fff;box-shadow:0 0 0 3px rgba(48,53,142,.1)}
+.contact form .btn{margin-top:2px;border-radius:10px;padding:13px 19px}
+@media(max-width:900px){.contact .grid{grid-template-columns:minmax(0,1fr)}.contact .card-info{min-height:0}}
+@media(max-width:600px){.contact{padding:60px 0 68px}.contact-home-head{margin-bottom:22px}.contact-home-head>p{font-size:14px}.contact .grid{gap:14px}.contact .card-info,.contact form{padding:24px;border-radius:18px}.contact-home-card-head{margin-bottom:22px}.contact-home-list{gap:17px}.contact .card-info .contact-home-item{grid-template-columns:38px minmax(0,1fr);gap:12px}.contact .card-info .contact-home-item>svg{width:38px;height:38px;padding:9px}.contact form input{height:48px}.contact form textarea{min-height:116px}}
+
+/* Show several reviews at once and advance the row as a responsive carousel. */
+.voices .vgrid{gap:18px}
+.voices .v-slide{flex:0 0 calc((100% - 36px)/3)}
+.voices .q{min-height:326px;padding:31px 23px 24px}
+.q-layout{grid-template-columns:76px minmax(0,1fr);gap:15px}
+.q-photo{width:76px;height:76px}
+.voices .q blockquote{font-size:14px;line-height:1.58}
+.voices .who{margin-top:18px}
+@media(max-width:900px){.voices .v-slide{flex-basis:calc((100% - 18px)/2)}.voices .q{min-height:300px}}
+@media(max-width:560px){.voices .v-slide{flex-basis:100%}.voices .q{min-height:300px;padding:30px 20px 22px}.q-layout{grid-template-columns:68px minmax(0,1fr);gap:16px}.q-photo{width:68px;height:68px}}
+
+/* Give the review cards enough width for even, readable slides. */
+.voices .v-slide{flex-basis:calc((100% - 18px)/2);display:flex;align-items:stretch}
+.voices .q{height:100%;min-height:340px;flex:1}
+.q-layout{width:100%}
+@media(max-width:680px){.voices .v-slide{flex-basis:100%}.voices .q{min-height:300px}}
+
+/* Final testimonials polish: clear header hierarchy, contained quote marks, and tighter cards. */
+.voices-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.72fr);align-items:end;gap:48px}
+.voices-head .kicker{margin-bottom:12px;letter-spacing:.14em}
+.voices-head .h2{max-width:22ch;font-size:clamp(34px,4vw,48px);letter-spacing:-.045em}
+.voices-head .sub{max-width:40ch;margin:0 0 4px;font-size:15px;line-height:1.7}
+.voices .v-carousel{margin-top:38px}
+.voices .q{height:100%;min-height:285px;padding:28px 26px 24px;border-radius:18px;box-shadow:0 18px 42px rgba(10,16,55,.18)}
+.voices .q::before{top:12px;right:20px;left:auto;width:40px;height:40px;font-size:39px}
+.q-layout{align-items:start;padding-top:27px}
+.voices .q blockquote{font-size:14px;line-height:1.62}
+.voices .who{margin-top:18px}
+@media(max-width:760px){.voices-head{grid-template-columns:minmax(0,1fr);gap:12px}.voices-head .sub{max-width:52ch}.voices .v-carousel{margin-top:32px}}
+@media(max-width:560px){.voices .q{min-height:280px;padding:24px 20px 21px}.voices .q::before{top:10px;right:14px;width:36px;height:36px;font-size:35px}.q-layout{padding-top:28px}}

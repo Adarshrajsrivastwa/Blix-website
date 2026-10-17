@@ -33,23 +33,38 @@ export default function Contact() {
   }
 
   return (
-    <section className="contact" id="contact" style={{ paddingTop: 80 }}>
+    <section className="contact" id="contact">
       <div className="wrap">
-        <span className="kicker reveal">Contact</span>
-        <h2 className="h2 reveal-slide">Get in touch</h2>
+        <div className="contact-home-head reveal">
+          <span className="kicker">Contact</span>
+          <h2 className="h2">Get in touch</h2>
+          <p>Have a project in mind? Tell us what you’re looking to achieve and we’ll help you plan the next step.</p>
+        </div>
         <div className="grid">
           <div className="card-info reveal-left" data-vi="up" data-vi-speed="25">
-            {info.map((item) => (
-              <div key={item.title}>
-                <svg viewBox="0 0 24 24" fill="currentColor">{item.icon}</svg>
-                <span>
-                  <h3>{item.title}</h3>
-                  {item.body}
-                </span>
-              </div>
-            ))}
+            <div className="contact-home-card-head">
+              <span>Contact details</span>
+              <h3>We’re here to help</h3>
+              <p>Reach out directly and our team will point you in the right direction.</p>
+            </div>
+            <div className="contact-home-list">
+              {info.map((item) => (
+                <div className="contact-home-item" key={item.title}>
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">{item.icon}</svg>
+                  <span>
+                    <h3>{item.title}</h3>
+                    {item.body}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
           <form onSubmit={handleSubmit} noValidate className="reveal-right">
+            <div className="contact-home-form-head full">
+              <span>Start a conversation</span>
+              <h3>Tell us about your project</h3>
+              <p>Share a few details and we’ll help you find the right solution.</p>
+            </div>
             <input type="text" placeholder="Name" aria-label="Name" />
             <input type="email" placeholder="Email address" aria-label="Email address" />
             <input className="full" type="tel" placeholder="Phone no." aria-label="Phone number" />
