@@ -40,10 +40,7 @@ export default function ModernCanvasBg() {
     const particles = []
 
     const colors = [
-      'rgba(46, 49, 145, ',   // Brand Indigo
-      'rgba(99, 102, 241, ',  // Electric Violet
-      'rgba(236, 72, 153, ',  // Pink / Magenta
-      'rgba(14, 165, 233, ',  // Sky Blue
+      'rgba(46, 49, 145, ',   // Brand Blue #2E3191
     ]
 
     for (let i = 0; i < particleCount; i++) {
@@ -53,7 +50,7 @@ export default function ModernCanvasBg() {
         vx: (Math.random() - 0.5) * 0.45,
         vy: (Math.random() - 0.5) * 0.45,
         radius: Math.random() * 2.2 + 1.2,
-        baseColor: colors[i % colors.length],
+        baseColor: colors[0],
         alpha: Math.random() * 0.4 + 0.25,
         pulseSpeed: Math.random() * 0.02 + 0.01,
         pulseOffset: Math.random() * Math.PI * 2,
@@ -70,7 +67,7 @@ export default function ModernCanvasBg() {
       mouse.x += (mouse.targetX - mouse.x) * 0.05
       mouse.y += (mouse.targetY - mouse.y) * 0.05
 
-      // Render subtle glowing mouse aura
+      // Render subtle glowing mouse aura in clean brand blue
       const gradient = ctx.createRadialGradient(
         mouse.x,
         mouse.y,
@@ -79,8 +76,8 @@ export default function ModernCanvasBg() {
         mouse.y,
         width * 0.35,
       )
-      gradient.addColorStop(0, 'rgba(99, 102, 241, 0.09)')
-      gradient.addColorStop(0.5, 'rgba(46, 49, 145, 0.04)')
+      gradient.addColorStop(0, 'rgba(46, 49, 145, 0.07)')
+      gradient.addColorStop(0.5, 'rgba(46, 49, 145, 0.02)')
       gradient.addColorStop(1, 'transparent')
       ctx.fillStyle = gradient
       ctx.fillRect(0, 0, width, height)
@@ -129,7 +126,7 @@ export default function ModernCanvasBg() {
             ctx.beginPath()
             ctx.moveTo(p.x, p.y)
             ctx.lineTo(p2.x, p2.y)
-            ctx.strokeStyle = `rgba(99, 102, 241, ${lineAlpha})`
+            ctx.strokeStyle = `rgba(46, 49, 145, ${lineAlpha})`
             ctx.lineWidth = 0.8
             ctx.stroke()
           }

@@ -18,8 +18,8 @@ const links = [
   { to: '/', label: 'Home', key: 'home' },
   { to: '/about', label: 'About Us', key: 'about' },
   { to: '/services', label: 'Services', key: 'services', dropdown: true },
-  { to: '/portfolio', label: 'Portfolio', key: 'portfolio' },
   { to: '/blog', label: 'Blog', key: 'blog' },
+  { to: '/academy', label: 'Academy', key: 'academy', accent: true },
   { to: '/#contact', label: 'Contact Us', key: 'contact' },
 ]
 
@@ -31,7 +31,7 @@ export default function Header() {
   const isActive = (l) => {
     if (l.key === 'home') return pathname === '/'
     if (l.key === 'contact') return pathname === '/' && hash === '#contact'
-    if (l.key === 'portfolio') return pathname === '/portfolio'
+    if (l.key === 'academy') return pathname.startsWith('/academy')
     if (l.key === 'services') return pathname.startsWith('/services')
     return pathname === l.to
   }
@@ -73,7 +73,7 @@ export default function Header() {
                     </div>
                   </>
                 ) : (
-                  <Link to={l.to} className={`nav-lnk ${isActive(l) ? 'on' : ''}`}>
+                  <Link to={l.to} className={`nav-lnk ${isActive(l) ? 'on' : ''}${l.accent ? ' nav-accent' : ''}`}>
                     {l.label}
                   </Link>
                 )}
