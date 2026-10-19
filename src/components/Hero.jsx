@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react'
 import { Link } from 'react-router-dom'
+import ModernCanvasBg from './ModernCanvasBg.jsx'
 
 const MarketingOrb = lazy(() => import('./MarketingOrb.jsx'))
 
@@ -12,6 +13,9 @@ const focusAreas = [
 export default function Hero() {
   return (
     <section className="hero">
+      <ModernCanvasBg />
+      <div className="hero-ambient-glow glow-1" aria-hidden="true" />
+      <div className="hero-ambient-glow glow-2" aria-hidden="true" />
       <div className="wrap hero-grid">
         <div className="hero-copy">
           <span className="pill2"><i />AI digital marketing & technology · Noida, India</span>
@@ -29,10 +33,28 @@ export default function Hero() {
         </div>
 
         <aside className="hero-visual-wrap" aria-label="Blix team and approach">
-          <div className="hero-photo-frame">
+          <div className="hero-photo-frame" data-tilt-3d="true">
             <img src="/studio-session.png" alt="A team discussing campaign ideas around a table" fetchPriority="high" />
             <div className="hero-photo-shade" />
             <Suspense fallback={null}><MarketingOrb /></Suspense>
+            
+            {/* 3D Floating Holographic Micro-Badges */}
+            <div className="hero-float-badge badge-growth" aria-hidden="true">
+              <span className="badge-pulse-dot" />
+              <div className="badge-text">
+                <small>AI Marketing</small>
+                <b>+280% Growth</b>
+              </div>
+            </div>
+
+            <div className="hero-float-badge badge-retention" aria-hidden="true">
+              <span className="badge-icon-star">★</span>
+              <div className="badge-text">
+                <small>Client Impact</small>
+                <b>99.4% Results</b>
+              </div>
+            </div>
+
             <div className="hero-photo-copy">
               <span>BUILT AROUND YOUR BUSINESS</span>
               <b>People first.<br />Performance with purpose.</b>
