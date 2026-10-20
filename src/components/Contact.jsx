@@ -5,7 +5,7 @@ const info = [
   {
     title: 'Location',
     icon: <path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" />,
-    body: <span>NX One, T-3, Office A 423, Techzone 4, Greater Noida West, Uttar Pradesh 201306</span>,
+    body: <span>NX One, Office – T3- A 1111, Techzone – 4, Greater Noida West, Noida, India, 201306</span>,
   },
   {
     title: 'Sales enquiry',

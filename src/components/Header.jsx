@@ -29,8 +29,8 @@ export default function Header() {
   const { pathname, hash } = useLocation()
 
   const isActive = (l) => {
-    if (l.key === 'home') return pathname === '/'
-    if (l.key === 'contact') return pathname === '/' && hash === '#contact'
+    if (l.key === 'home') return pathname === '/' && (!hash || hash === '')
+    if (l.key === 'contact') return hash === '#contact'
     if (l.key === 'academy') return pathname.startsWith('/academy')
     if (l.key === 'services') return pathname.startsWith('/services')
     return pathname === l.to

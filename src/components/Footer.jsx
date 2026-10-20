@@ -96,7 +96,7 @@ export default function Footer() {
         <div className="ft-col">
           <h3>Connect with us</h3>
           <ul className="ft-contact">
-            <li><b>Address : </b>T-3, A-423, NX One, Techzone-4, Greater Noida West, Uttar Pradesh – 201306</li>
+            <li><b>Address : </b>NX One, Office – T3- A 1111, Techzone – 4, Greater Noida West, Noida, India, 201306</li>
             <li><b>Email : </b><a href="mailto:info@blixtechnologies.com">info@blixtechnologies.com</a></li>
             <li><b>Phone : </b><a href="tel:+918448983343">+91-84489 83343</a></li>
           </ul>

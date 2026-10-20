@@ -113,8 +113,8 @@ export default function SEO({
       telephone: '+91-8448983343',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'NX One, T-3, Office A 423, Techzone 4',
-        addressLocality: 'Greater Noida West',
+        streetAddress: 'NX One, Office – T3- A 1111, Techzone – 4',
+        addressLocality: 'Greater Noida West, Noida',
         addressRegion: 'Uttar Pradesh',
         postalCode: '201306',
         addressCountry: 'IN',
