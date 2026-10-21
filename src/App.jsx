@@ -92,57 +92,7 @@ function CursorSpotlight() {
   return <div ref={lightRef} className="cursor-spotlight" aria-hidden="true" />
 }
 
-function Interactive3DTilt() {
-  const { pathname } = useLocation()
 
-  useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
-    if (window.matchMedia('(pointer: coarse)').matches) return undefined
-
-    const cards = document.querySelectorAll(
-      '.tile, .vm-card, .st, .row, .q, .blog-card, .portfolio-card, .logo-card, .trend, .why-card, .learn, .faq-item, .fees, .cinfo, .card-info, .stat, .director-card, .hero-photo-frame, .featured-logo, [data-tilt-3d="true"]'
-    )
-
-    const cleanups = []
-
-    cards.forEach((card) => {
-      const onMouseMove = (e) => {
-        const rect = card.getBoundingClientRect()
-        const x = e.clientX - rect.left
-        const y = e.clientY - rect.top
-        const centerX = rect.width / 2
-        const centerY = rect.height / 2
-
-        const rotateX = ((y - centerY) / centerY) * -9
-        const rotateY = ((x - centerX) / centerX) * 9
-
-        card.style.setProperty('--tilt-rx', `${rotateX.toFixed(2)}deg`)
-        card.style.setProperty('--tilt-ry', `${rotateY.toFixed(2)}deg`)
-        card.style.setProperty('--mouse-x', `${((x / rect.width) * 100).toFixed(1)}%`)
-        card.style.setProperty('--mouse-y', `${((y / rect.height) * 100).toFixed(1)}%`)
-      }
-
-      const onMouseLeave = () => {
-        card.style.setProperty('--tilt-rx', '0deg')
-        card.style.setProperty('--tilt-ry', '0deg')
-      }
-
-      card.addEventListener('mousemove', onMouseMove, { passive: true })
-      card.addEventListener('mouseleave', onMouseLeave, { passive: true })
-
-      cleanups.push(() => {
-        card.removeEventListener('mousemove', onMouseMove)
-        card.removeEventListener('mouseleave', onMouseLeave)
-      })
-    })
-
-    return () => {
-      cleanups.forEach((fn) => fn())
-    }
-  }, [pathname])
-
-  return null
-}
 
 function PageMotion() {
   const { pathname } = useLocation()
@@ -201,7 +151,6 @@ export default function App() {
     <>
       <ScrollProgress />
       <CursorSpotlight />
-      <Interactive3DTilt />
       <ScrollManager />
       <PageMotion />
       <Header />

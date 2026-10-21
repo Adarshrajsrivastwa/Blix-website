@@ -4,8 +4,12 @@ const useful = [
   { label: '360 Digital Marketing', to: '/services/digital-marketing' },
   { label: 'SEO Services', to: '/services/seo' },
   { label: 'Social Media Services', to: '/services/social-media' },
+  { label: 'Real Estate Marketing', to: '/services/real-estate-marketing' },
+  { label: 'Online Reputation Management', to: '/services/orm' },
+  { label: 'Personal Branding', to: '/services/personal-branding' },
   { label: 'Web Development', to: '/services/web-development' },
-  { label: 'App Development', to: '/services/app-development' },
+  { label: 'Mobile App Development', to: '/services/app-development' },
+  { label: 'Software Development', to: '/services/software-development' },
 ]
 
 const company = [

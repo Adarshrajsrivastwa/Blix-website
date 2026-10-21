@@ -4,7 +4,7 @@ import SEO from '../components/SEO.jsx'
 
 export default function ServiceDetail() {
   const { slug } = useParams()
-  const svc = services.find((s) => s.slug === slug) || services[0]
+  const svc = services.find((s) => s.slug === slug || (s.aliases && s.aliases.includes(slug))) || services[0]
 
   const svcLd = [
     {

@@ -1,8 +1,4 @@
-import { lazy, Suspense } from 'react'
 import { Link } from 'react-router-dom'
-import ModernCanvasBg from './ModernCanvasBg.jsx'
-
-const MarketingOrb = lazy(() => import('./MarketingOrb.jsx'))
 
 const focusAreas = [
   { number: '01', name: 'Find the audience', detail: 'Research, positioning and a clear plan' },
@@ -13,12 +9,9 @@ const focusAreas = [
 export default function Hero() {
   return (
     <section className="hero">
-      <ModernCanvasBg />
-      <div className="hero-ambient-glow glow-1" aria-hidden="true" />
-      <div className="hero-ambient-glow glow-2" aria-hidden="true" />
       <div className="wrap hero-grid">
         <div className="hero-copy">
-          <span className="pill2"><i />AI digital marketing & technology · Noida, India</span>
+          <span className="pill2"><i />AI digital marketing &amp; technology · Noida, India</span>
           <h1>
             Good marketing starts with <em>a clear direction.</em>
           </h1>
@@ -33,12 +26,11 @@ export default function Hero() {
         </div>
 
         <aside className="hero-visual-wrap" aria-label="Blix team and approach">
-          <div className="hero-photo-frame" data-tilt-3d="true">
+          <div className="hero-photo-frame">
             <img src="/studio-session.png" alt="A team discussing campaign ideas around a table" fetchPriority="high" />
             <div className="hero-photo-shade" />
-            <Suspense fallback={null}><MarketingOrb /></Suspense>
             
-            {/* 3D Floating Holographic Micro-Badges */}
+            {/* Clean Badges */}
             <div className="hero-float-badge badge-growth" aria-hidden="true">
               <span className="badge-pulse-dot" />
               <div className="badge-text">

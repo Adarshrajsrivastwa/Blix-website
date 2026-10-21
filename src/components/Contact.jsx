@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 
 const info = [
   {
@@ -26,6 +25,18 @@ const info = [
 
 export default function Contact() {
   const [sent, setSent] = useState(false)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    website: '',
+    message: '',
+  })
+
+  function handleChange(e) {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -65,13 +76,55 @@ export default function Contact() {
               <h3>Tell us about your project</h3>
               <p>Share a few details and we’ll help you find the right solution.</p>
             </div>
-            <input type="text" placeholder="Name" aria-label="Name" />
-            <input type="email" placeholder="Email address" aria-label="Email address" />
-            <input className="full" type="tel" placeholder="Phone no." aria-label="Phone number" />
-            <textarea className="full" placeholder="Message" aria-label="Message"></textarea>
-            <Link to="/#contact" className="btn btn-line" style={{ gridColumn: '1 / -1', justifySelf: 'start' }}>
-              Open full contact form →
-            </Link>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name *"
+              aria-label="Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email address *"
+              aria-label="Email address"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone no."
+              aria-label="Phone number"
+              value={formData.phone}
+              onChange={handleChange}
+            />
+            <input
+              type="url"
+              name="website"
+              placeholder="Your website (Optional)"
+              aria-label="Your website (Optional)"
+              value={formData.website}
+              onChange={handleChange}
+            />
+            <textarea
+              className="full"
+              name="message"
+              placeholder="Message"
+              aria-label="Message"
+              value={formData.message}
+              onChange={handleChange}
+            ></textarea>
+            <button
+              type="submit"
+              className="btn btn-pink"
+              style={{ gridColumn: '1 / -1', justifySelf: 'start', cursor: 'pointer' }}
+            >
+              Submit
+            </button>
             <p className={`ok-msg full${sent ? ' show' : ''}`} role="status">
               Thanks! We've received your message and will reply within one working day.
             </p>
