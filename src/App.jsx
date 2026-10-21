@@ -11,6 +11,7 @@ import ServicesPage from './pages/ServicesPage.jsx'
 import ServiceDetail from './pages/ServiceDetail.jsx'
 import BlogPage from './pages/BlogPage.jsx'
 import PortfolioPage from './pages/PortfolioPage.jsx'
+import FloatingContact from './components/FloatingContact.jsx'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -154,6 +155,7 @@ export default function App() {
       <ScrollManager />
       <PageMotion />
       <Header />
+      <FloatingContact />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />

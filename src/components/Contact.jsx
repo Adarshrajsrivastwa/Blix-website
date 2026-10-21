@@ -130,6 +130,19 @@ export default function Contact() {
             </p>
           </form>
         </div>
+        <div className="contact-map-wrap reveal">
+          <iframe
+            className="contact-map"
+            title="Blix Technologies office location"
+            src="https://www.google.com/maps?q=NX%20One%2C%20Office%20T3-A%201111%2C%20Techzone%204%2C%20Greater%20Noida%20West%2C%20Noida%2C%20India&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+          <a className="contact-map-link" href="https://maps.app.goo.gl/UUCY7FeMWDv5mVbQ7" target="_blank" rel="noreferrer">
+            Open location in Google Maps ↗
+          </a>
+        </div>
       </div>
     </section>
   )
