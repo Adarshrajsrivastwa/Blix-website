@@ -3104,13 +3104,19 @@ main#top .hero {
   padding: 140px 0 80px !important;
 }
 main#top .hero h1 {
-  color: #111827 !important;
+  color: #2E3191 !important;
   font-size: clamp(38px, 4.6vw, 56px) !important;
   font-weight: 850 !important;
   letter-spacing: -0.04em !important;
   line-height: 1.08 !important;
 }
-main#top .hero h1 em,
+main#top .hero h1 em {
+  color: #2E3191 !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: #2E3191 !important;
+  font-style: normal !important;
+}
 main#top .text-pink,
 .text-pink {
   color: #EC008C !important;
