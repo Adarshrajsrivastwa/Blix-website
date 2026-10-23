@@ -80,7 +80,7 @@ export default function Voices() {
         <div className="voices-head reveal">
           <div>
             <span className="kicker">Client testimonials</span>
-            <h2 className="h2">Reviews from our happy clients</h2>
+            <h2 className="h2">Reviews from our <span className="text-pink">happy clients</span></h2>
           </div>
           <p className="sub">Your next big idea deserves our creative touch. Let's collaborate on bringing your next business vision to life.</p>
         </div>

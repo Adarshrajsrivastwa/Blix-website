@@ -8,7 +8,7 @@ export default function LatestBlog() {
         <div className="latest-blog-head">
           <div>
             <span className="kicker reveal">From the blog</span>
-            <h2 className="h2 reveal" id="latest-blog-title">Ideas you can put to work</h2>
+            <h2 className="h2 reveal" id="latest-blog-title">Ideas you can <span className="text-pink">put to work</span></h2>
           </div>
           <Link className="latest-blog-more reveal" to="/blog">More from the blog <span aria-hidden="true">→</span></Link>
         </div>

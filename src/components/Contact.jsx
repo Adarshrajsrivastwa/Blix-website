@@ -48,7 +48,7 @@ export default function Contact() {
       <div className="wrap">
         <div className="contact-home-head reveal">
           <span className="kicker">Contact</span>
-          <h2 className="h2">Get in touch</h2>
+          <h2 className="h2">Get in <span className="text-pink">touch</span></h2>
           <p>Have a project in mind? Tell us what you’re looking to achieve and we’ll help you plan the next step.</p>
         </div>
         <div className="grid">

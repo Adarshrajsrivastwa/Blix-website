@@ -11,6 +11,8 @@ import Contact from '../components/Contact.jsx'
 import FeaturedWith from '../components/FeaturedWith.jsx'
 import HomeFaq from '../components/HomeFaq.jsx'
 import SEO from '../components/SEO.jsx'
+import StatsMilestones from '../components/StatsMilestones.jsx'
+import Industries from '../components/Industries.jsx'
 
 export default function Home() {
   const homeLd = [
@@ -80,8 +82,10 @@ export default function Home() {
       <Hero />
       <Clients />
       <About />
+      <StatsMilestones />
       <Services />
       <Portfolio />
+      <Industries />
       <Process />
       <Why />
       <Voices />

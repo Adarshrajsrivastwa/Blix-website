@@ -8,7 +8,7 @@ export default function Services() {
         <div className="top">
           <div>
             <span className="kicker reveal">Our service list</span>
-            <h2 className="h2 reveal">What we offer to you</h2>
+            <h2 className="h2 reveal">What we offer <span className="text-pink">to you</span></h2>
           </div>
           <p className="reveal">
             <strong>Helping your business shine online</strong>

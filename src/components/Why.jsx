@@ -35,7 +35,7 @@ export default function Why() {
       <div className="wrap">
         <div className="side">
           <span className="kicker reveal">Why Blix</span>
-          <h2 className="h2 reveal">Why partner with Blix Technologies?</h2>
+          <h2 className="h2 reveal">Why partner with <span className="text-pink">Blix Technologies?</span></h2>
           <p className="reveal">Strategy, creativity and technology working together, with one dedicated contact for your account.</p>
           <Link to="/#contact" className="btn btn-pink reveal-zoom">Talk to our team</Link>
         </div>

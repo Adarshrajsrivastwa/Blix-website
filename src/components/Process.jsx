@@ -18,7 +18,7 @@ export default function Process() {
     <section className="process">
       <div className="wrap">
         <span className="kicker reveal">How we work</span>
-        <h2 className="h2 reveal">Great experience, delivered quickly, with the best digital marketing</h2>
+        <h2 className="h2 reveal">Great experience, delivered quickly, with the <span className="text-pink">best digital marketing</span></h2>
         <div className="steps reveal-stagger">
           {steps.map((s) => (
             <div key={s.title} className="st reveal-zoom" data-vi="zoom">
