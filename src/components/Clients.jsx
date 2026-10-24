@@ -10,6 +10,8 @@ const clients = [
   { name: 'Investors Junction', src: 'investors-junction.webp' },
   { name: 'Genie Property', src: 'genie-property.jpeg' },
   { name: 'Tech Bar Livingston', src: 'tech-bar-livingston.jpeg' },
+  { name: 'Touch Architecture', src: 'touch-architecture.jpeg' },
+  { name: 'SAM', src: 'sam.png' },
 ]
 
 function LogoSet({ duplicate = false }) {

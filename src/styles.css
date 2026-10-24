@@ -5087,6 +5087,12 @@ main#top.about-route .page-head h1 {
 .client-carousel { max-width: 1380px; margin-inline: auto; }
 .client-logo-set { gap: 22px !important; }
 .client-logo { flex-basis: 320px !important; width: 320px !important; height: 145px !important; }
+.client-logo,
+.client-logo img { border-top: 0 !important; border-bottom: 0 !important; outline: 0 !important; box-shadow: none !important; }
+.client-logo::before,
+.client-logo::after,
+.client-logo img::before,
+.client-logo img::after { content: none !important; display: none !important; }
 @media (max-width: 800px) {
   .digital-marketing-page .hero-focus-list small { display: none; }
   .digital-marketing-page .digital-intro .about-visual { min-height: 280px; }
