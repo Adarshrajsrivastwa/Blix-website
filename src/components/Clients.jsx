@@ -1,5 +1,4 @@
 const clients = [
-  { name: 'RCI Real Capital Infra', src: 'rci.webp' },
   { name: 'Renepho Hospital', src: 'renepho.webp' },
   { name: 'Junior Ville Preschool and Daycare', src: 'junior-ville.webp' },
   { name: 'Tech Haven', src: 'tech-haven.webp' },
@@ -9,6 +8,8 @@ const clients = [
   { name: 'Property Nexus', src: 'property-nexus.webp' },
   { name: 'RTO Agent Services', src: 'rto-agent-services.webp' },
   { name: 'Investors Junction', src: 'investors-junction.webp' },
+  { name: 'Genie Property', src: 'genie-property.jpeg' },
+  { name: 'Tech Bar Livingston', src: 'tech-bar-livingston.jpeg' },
 ]
 
 function LogoSet({ duplicate = false }) {

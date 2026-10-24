@@ -5076,84 +5076,22 @@ main#top.about-route .page-head h1 {
   }
 }
 
-/* Digital marketing service page */
-.dm-page { background: #fff; color: #151b26; }
-.dm-page .wrap { width: min(1320px, calc(100% - 48px)); margin-inline: auto; }
-.dm-hero { min-height: 320px; padding: 132px 0 74px; display: grid; align-items: center; text-align: center; color: #fff; background: #30348f; }
-.dm-hero .wrap { display: grid; justify-items: center; }
-.dm-hero h1 { margin: 0; max-width: none; color: #fff; font-size: clamp(38px, 4vw, 56px); line-height: 1.12; letter-spacing: -.035em; }
-.dm-hero p { margin: 22px 0 0; color: #fff; font-size: clamp(16px, 1.35vw, 21px); font-weight: 700; letter-spacing: .055em; text-transform: capitalize; }
-.dm-eyebrow { display: block; margin-bottom: 12px; color: #ed1688; font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
-.dm-hero .dm-eyebrow { color: #ffc6e4; }
-.dm-content { padding-top: 78px; padding-bottom: 86px; }
-.dm-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(36px, 6vw, 88px); align-items: center; margin-bottom: 96px; }
-.dm-split.dm-reverse .dm-media { order: 2; }
-.dm-split.dm-reverse .dm-copy { order: 1; }
-.dm-media { min-width: 0; overflow: hidden; border-radius: 4px; aspect-ratio: 1.43 / 1; background: #f1f2f8; }
-.dm-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.dm-copy h2,.dm-section-heading h2 { margin: 0 0 22px; color: #113d70; font-size: clamp(28px, 3vw, 40px); line-height: 1.15; letter-spacing: -.025em; }
-.dm-copy p,.dm-section-heading p { margin: 0 0 18px; color: #252b36; font-size: 17px; line-height: 1.8; letter-spacing: .025em; }
-.dm-copy p:last-child { margin-bottom: 0; }
-.dm-copy strong { color: #172233; }
-.dm-growth { margin-bottom: 98px; }
-.dm-section-heading { max-width: 940px; margin: 0 auto 50px; text-align: center; }
-.dm-section-heading h2 { margin-bottom: 14px; }
-.dm-section-heading p { margin: 0; }
-.dm-growth .dm-split { margin-bottom: 0; }
-.dm-services { margin-bottom: 100px; }
-.dm-heading-left { max-width: none; margin: 0 0 42px; text-align: left; }
-.dm-service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
-.dm-service-card { min-height: 280px; padding: 28px 30px; border: 1.5px solid #2e3191; border-radius: 12px; background: #fff; box-shadow: 0 12px 34px rgba(25, 35, 80, .06); }
-.dm-card-number { display: inline-flex; width: 42px; height: 42px; align-items: center; justify-content: center; margin-bottom: 22px; border-radius: 50%; color: #ed1688; background: #fff0f8; font-size: 13px; font-weight: 800; }
-.dm-service-card h3,.dm-benefit-card h3 { margin: 0 0 12px; color: #30348f; font-size: 22px; line-height: 1.25; }
-.dm-service-card p,.dm-benefit-card p { margin: 0; color: #252b36; font-size: 16px; line-height: 1.7; }
-.dm-service-card a { display: inline-flex; gap: 8px; margin-top: 20px; color: #ed1688; font-size: 14px; font-weight: 800; letter-spacing: .04em; text-decoration: none; text-transform: uppercase; }
-.dm-service-card a:hover { color: #30348f; }
-.dm-why { margin-bottom: 20px; }
-.dm-why .dm-section-heading { margin-bottom: 46px; }
-.dm-why > .dm-split { margin-bottom: 62px; }
-.dm-benefit-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; align-items: stretch; }
-.dm-benefit-card { padding: 32px 28px; border: 1.5px solid #30348f; border-radius: 12px; text-align: center; background: #fff; }
-.dm-benefit-card:nth-child(2) { border-color: #ed1688; }
-.dm-benefit-mark { display: block; margin-bottom: 22px; color: #ed1688; font-size: 40px; line-height: 1; }
-.dm-benefit-card h3 { font-size: 21px; }
-.dm-cta { padding: 76px 0 82px; text-align: center; background: #f5f1f3; }
-.dm-cta .wrap { max-width: 980px; }
-.dm-cta h2 { margin: 0 auto 18px; color: #30348f; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.18; }
-.dm-cta p { margin: 0 auto 28px; color: #252b36; font-size: 17px; line-height: 1.7; }
-.dm-cta .btn { display: inline-flex; align-items: center; gap: 10px; }
+
+/* Digital marketing page refinements that use the homepage design system */
+.digital-marketing-page .digital-services .tile .ic { border-radius: 0; background: transparent; color: #2E3191; box-shadow: none; }
+.digital-marketing-page .dm-tile-number { color: #E6007E; font-size: 12px; font-weight: 800; letter-spacing: .04em; }
+.digital-marketing-page .hero-focus-list small { color: #586171; font-size: 10px; line-height: 1.35; }
+.digital-marketing-page .digital-process .h2 { max-width: 19em; margin-bottom: 0; }
+.digital-marketing-page .digital-process .kicker { display: inline-block; }
+.digital-marketing-page .digital-intro .about-visual { min-height: 360px; }
+.client-carousel { max-width: 1380px; margin-inline: auto; }
+.client-logo-set { gap: 22px !important; }
+.client-logo { flex-basis: 320px !important; width: 320px !important; height: 145px !important; }
 @media (max-width: 800px) {
-  .dm-hero { min-height: 270px; padding: 116px 0 58px; }
-  .dm-content { padding-top: 48px; padding-bottom: 54px; }
-  .dm-split { grid-template-columns: 1fr; gap: 24px; margin-bottom: 58px; }
-  .dm-split.dm-reverse .dm-media,.dm-split.dm-reverse .dm-copy { order: initial; }
-  .dm-media { aspect-ratio: 1.5 / 1; }
-  .dm-copy h2 { margin-bottom: 16px; }
-  .dm-copy p,.dm-section-heading p { font-size: 16px; line-height: 1.7; }
-  .dm-growth,.dm-services { margin-bottom: 62px; }
-  .dm-section-heading { margin-bottom: 30px; }
-  .dm-service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-  .dm-service-card { min-height: 0; padding: 22px; }
-  .dm-service-card h3,.dm-benefit-card h3 { font-size: 19px; }
-  .dm-benefit-grid { gap: 16px; }
-  .dm-benefit-card { padding: 24px 18px; }
+  .digital-marketing-page .hero-focus-list small { display: none; }
+  .digital-marketing-page .digital-intro .about-visual { min-height: 280px; }
 }
-@media (max-width: 560px) {
-  .dm-page .wrap { width: min(100% - 36px, 1320px); }
-  .dm-hero { min-height: 240px; padding: 104px 0 48px; }
-  .dm-hero h1 { font-size: clamp(32px, 9vw, 42px); }
-  .dm-hero p { margin-top: 16px; font-size: 14px; line-height: 1.55; letter-spacing: .025em; }
-  .dm-content { padding-top: 34px; padding-bottom: 42px; }
-  .dm-split { margin-bottom: 48px; }
-  .dm-copy h2,.dm-section-heading h2 { font-size: 28px; }
-  .dm-copy p,.dm-section-heading p { font-size: 15px; }
-  .dm-growth,.dm-services { margin-bottom: 52px; }
-  .dm-section-heading { text-align: left; }
-  .dm-service-grid,.dm-benefit-grid { grid-template-columns: 1fr; }
-  .dm-service-card { padding: 22px 24px; }
-  .dm-benefit-card { text-align: left; }
-  .dm-benefit-mark { margin-bottom: 14px; }
-  .dm-cta { padding: 54px 0 58px; text-align: left; }
-  .dm-cta h2 { font-size: 30px; }
-  .dm-cta p { font-size: 15px; }
+@media (max-width: 700px) {
+  .client-carousel { max-width: 100%; }
+  .client-logo { flex-basis: 190px !important; width: 190px !important; height: 116px !important; }
 }

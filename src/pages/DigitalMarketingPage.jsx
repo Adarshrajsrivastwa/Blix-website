@@ -1,121 +1,116 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO.jsx'
+import Clients from '../components/Clients.jsx'
+import Why from '../components/Why.jsx'
+import Voices from '../components/Voices.jsx'
+import HomeFaq from '../components/HomeFaq.jsx'
+import Contact from '../components/Contact.jsx'
 
-const services = [
-  { title: 'Search Engine Optimization', text: 'Improve your visibility in search with technical, on-page, local, and content-led SEO built around the terms your customers use.' },
-  { title: 'Content Marketing', text: 'Turn expertise into useful blogs, landing pages, and social content that builds trust and helps customers take the next step.' },
-  { title: 'Social Media Marketing', text: 'Create a consistent social presence with platform-specific content, community management, and campaigns that reach the right people.' },
-  { title: 'Paid Advertising', text: 'Reach high-intent audiences through carefully planned Google and social campaigns, with clear budgets and conversion tracking.' },
-  { title: 'Email Marketing', text: 'Nurture leads and strengthen customer relationships with relevant campaigns, automated journeys, and measurable improvements.' },
-  { title: 'Online Reputation Management', text: 'Build confidence in your brand through review monitoring, thoughtful responses, and a stronger, more consistent online presence.' },
+const focusAreas = [
+  { number: '01', name: 'Know your audience', detail: 'Research, positioning and clear priorities' },
+  { number: '02', name: 'Build your presence', detail: 'Search, content and campaigns that connect' },
+  { number: '03', name: 'Keep improving', detail: 'Measure progress and refine what works' },
 ]
 
-const benefits = [
-  { title: 'Professional & Creative Minds', text: 'Work with specialists who bring fresh ideas, clear communication, and practical experience to every campaign.' },
-  { title: 'A Strategy Built Around You', text: 'Your goals, audience, and budget shape the plan. We adapt the channels and priorities to fit your business.' },
-  { title: 'Client-Oriented Approach', text: 'Stay involved with regular updates, transparent reporting, and a team that listens and responds as your needs evolve.' },
+const digitalServices = [
+  { title: 'Search Engine Optimization', text: 'Improve search visibility with technical, on-page, local, and content-led SEO shaped around the terms your customers use.' },
+  { title: 'Content Marketing', text: 'Turn your expertise into useful blogs, landing pages, and social content that builds trust and encourages action.' },
+  { title: 'Social Media Marketing', text: 'Grow a consistent social presence with platform-specific content, community management, and focused campaigns.' },
+  { title: 'Paid Advertising', text: 'Reach high-intent audiences through planned Google and social campaigns, with clear budgets and conversion tracking.' },
+  { title: 'Email Marketing', text: 'Nurture leads and strengthen customer relationships with relevant campaigns and automated journeys.' },
+  { title: 'Online Reputation Management', text: 'Support customer confidence through review monitoring, thoughtful responses, and a stronger online presence.' },
 ]
-
-function MediaText({ image, alt, title, children, reverse = false }) {
-  return (
-    <section className={`dm-split${reverse ? ' dm-reverse' : ''}`}>
-      <div className="dm-media"><img src={image} alt={alt} loading="lazy" /></div>
-      <div className="dm-copy">
-        {title && <h2>{title}</h2>}
-        {children}
-      </div>
-    </section>
-  )
-}
 
 export default function DigitalMarketingPage() {
   return (
-    <main className="dm-page" id="top">
+    <main id="top" className="digital-marketing-page">
       <SEO
         title="Digital Marketing Services | Blix Technologies"
-        description="Grow your business with data-driven digital marketing services from Blix Technologies, including SEO, paid advertising, social media, content, and email marketing."
+        description="Grow your business with digital marketing services from Blix Technologies, including SEO, paid advertising, social media, content, and email marketing."
         keywords="digital marketing services, SEO, social media marketing, content marketing, paid advertising, Blix Technologies"
       />
 
-      <header className="dm-hero">
-        <div className="wrap">
-          <span className="dm-eyebrow">Blix Technologies</span>
-          <h1>Digital Marketing Services</h1>
-          <p>Grow your client base with data-driven and targeted strategies</p>
-        </div>
-      </header>
-
-      <div className="wrap dm-content">
-        <MediaText image="/studio-session.png" alt="Digital team working together on a marketing project" title="Digital Marketing That Drives Real Results">
-          <p>At Blix Technologies, we provide digital marketing services designed to improve visibility, attract the right customers, and support sustainable growth. From SEO and paid advertising to social media and content, our team builds a practical strategy around your business goals.</p>
-          <p>Whether you are launching a new business or growing an established brand, we focus on useful work, clear measurement, and steady improvement—so you can see how your marketing is progressing.</p>
-        </MediaText>
-
-        <MediaText image="/campaign-planning.png" alt="Marketing campaign planning materials on a desk" reverse>
-          <p>At <strong>Blix Technologies</strong>, we know every business has different customers, priorities, and challenges. We take time to understand your audience and shape a plan that fits your market, resources, and goals.</p>
-          <p>From search and social campaigns to content and website optimization, our team connects each activity to a clear purpose. We review performance with you and use the results to make informed improvements over time.</p>
-        </MediaText>
-
-        <section className="dm-growth">
-          <div className="dm-section-heading">
-            <span className="dm-eyebrow">A connected approach</span>
-            <h2>Digital Marketing Services Drive Business Growth</h2>
-            <p>Reach the right audience, build brand awareness, and create more opportunities to grow.</p>
+      <section className="hero">
+        <div className="wrap hero-grid">
+          <div className="hero-copy">
+            <span className="pill2"><i />Digital marketing services · Noida, India</span>
+            <h1>Make your digital presence work harder.</h1>
+            <p className="lead">Blix brings strategy, creative work, and technology together to help your business reach the right people and grow online.</p>
+            <div className="cta">
+              <Link to="/#contact" className="btn btn-pink">Talk to our team <span aria-hidden="true">↗</span></Link>
+              <Link to="#digital-services" className="hero-text-link">Explore services <span aria-hidden="true">↓</span></Link>
+            </div>
+            <div className="hero-note"><span /> One connected team, from planning through ongoing improvement</div>
           </div>
-          <MediaText image="/studio-session.png" alt="Creative team discussing digital marketing ideas">
-            <p>In today’s digital-first world, customers use online channels to discover, compare, and choose businesses. Digital marketing helps you show up at the right moments, communicate what makes your business useful, and make it easier for people to get in touch.</p>
-            <p>A consistent online presence can attract new customers and strengthen relationships with existing ones. With thoughtful targeting and ongoing measurement, your campaigns can stay relevant while making better use of your marketing budget.</p>
-          </MediaText>
-        </section>
-
-        <section className="dm-services">
-          <div className="dm-section-heading dm-heading-left">
-            <span className="dm-eyebrow">What we do</span>
-            <h2>Our Digital Marketing Services</h2>
-            <p>We plan and manage the channels that help your business connect with customers and make progress toward its goals.</p>
-          </div>
-          <div className="dm-service-grid">
-            {services.map((service, index) => (
-              <article className="dm-service-card" key={service.title}>
-                <span className="dm-card-number">0{index + 1}</span>
-                <h3>{service.title}</h3>
-                <p>{service.text}</p>
-                <Link to="/#contact">Learn more <span aria-hidden="true">→</span></Link>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="dm-why">
-          <div className="dm-section-heading">
-            <span className="dm-eyebrow">Your growth partner</span>
-            <h2>Why Choose Blix for Digital Marketing?</h2>
-          </div>
-          <MediaText image="/campaign-planning.png" alt="Team planning a client marketing campaign">
-            <p>Blix Technologies helps businesses build a stronger online presence with focused digital marketing and a team that stays close to your goals. We combine creative thinking with practical planning to make each campaign purposeful and easy to measure.</p>
-            <p><strong>A clear, collaborative process:</strong> We learn about your business, agree on priorities, and keep you informed as work moves forward. You get transparent reporting and recommendations you can act on.</p>
-            <p>As your needs change, we can refine the strategy and channel mix together—keeping your marketing aligned with the customers you want to reach.</p>
-          </MediaText>
-          <div className="dm-benefit-grid">
-            {benefits.map((benefit) => (
-              <article className="dm-benefit-card" key={benefit.title}>
-                <span className="dm-benefit-mark" aria-hidden="true">✳</span>
-                <h3>{benefit.title}</h3>
-                <p>{benefit.text}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-      </div>
-
-      <section className="dm-cta">
-        <div className="wrap">
-          <span className="dm-eyebrow">Ready to grow?</span>
-          <h2>Make your digital marketing work harder for your business</h2>
-          <p>Talk with our team about your goals and get a tailored plan for reaching the right audience.</p>
-          <Link to="/#contact" className="btn btn-pink">Get a free consultation <span aria-hidden="true">→</span></Link>
+          <aside className="hero-visual-wrap" aria-label="Blix digital marketing approach">
+            <div className="hero-photo-frame">
+              <img src="/studio-session.png" alt="Blix team collaborating on a digital marketing project" fetchPriority="high" />
+              <div className="hero-photo-shade" />
+              <div className="hero-photo-copy"><span>BUILT AROUND YOUR BUSINESS</span><b>Clear strategy.<br />Marketing with purpose.</b></div>
+            </div>
+            <div className="hero-focus-list">
+              {focusAreas.map((item) => <div key={item.number}><span>{item.number}</span><b>{item.name}</b><small>{item.detail}</small></div>)}
+            </div>
+          </aside>
         </div>
       </section>
+
+      <Clients />
+
+      <section className="about digital-intro">
+        <div className="wrap">
+          <div className="collage about-visual reveal-left">
+            <img src="/campaign-planning.png" alt="A marketing team planning a campaign" loading="lazy" decoding="async" />
+            <div className="about-photo-note">
+              <span className="about-note-mark" aria-hidden="true">b</span>
+              <span><strong>Strategy meets creativity</strong><small>Digital growth shaped around your goals</small></span>
+            </div>
+          </div>
+          <div>
+            <span className="kicker">A practical growth partner</span>
+            <h2 className="h2">Digital marketing that drives meaningful results</h2>
+            <p>Every business has different customers, priorities, and challenges. We take time to understand yours, then create a clear plan to improve visibility, attract the right audience, and make it easier for people to choose you.</p>
+            <p>From SEO and paid campaigns to social media and content, each activity works toward your goals. We measure progress, share what we learn, and improve the plan as your business grows.</p>
+            <Link className="btn btn-line" to="/#contact">Plan your next step</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="services digital-services" id="digital-services">
+        <div className="wrap">
+          <div className="top">
+            <div><span className="kicker">Our service list</span><h2 className="h2">Digital marketing, connected</h2></div>
+            <p><strong>One plan, the right channels</strong>Bring search, content, social media, advertising, and email together around what your business needs most.</p>
+          </div>
+          <div className="bento">
+            {digitalServices.map((service, index) => (
+              <article className="tile" key={service.title}>
+                <div className="tile-head"><div className="ic" aria-hidden="true"><span className="dm-tile-number">0{index + 1}</span></div><h3>{service.title}</h3></div>
+                <p>{service.text}</p>
+                <Link className="go" to="/#contact">Talk to our team <span aria-hidden="true">→</span></Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Why />
+
+      <section className="process digital-process">
+        <div className="wrap">
+          <span className="kicker kicker-light">How we work</span>
+          <h2 className="h2">A clear process from first conversation to better results</h2>
+          <div className="steps">
+            <article className="st"><h3>Understand</h3><p>We learn about your business, audience, current channels, and goals before recommending a direction.</p></article>
+            <article className="st"><h3>Plan &amp; deliver</h3><p>We agree on priorities and timelines, then our specialists put the strategy into action.</p></article>
+            <article className="st"><h3>Measure &amp; improve</h3><p>We review meaningful performance data with you and use it to guide the next improvements.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <Voices />
+      <HomeFaq />
+      <Contact />
     </main>
   )
 }
