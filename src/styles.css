@@ -5101,3 +5101,14 @@ main#top.about-route .page-head h1 {
   .client-carousel { max-width: 100%; }
   .client-logo { flex-basis: 190px !important; width: 190px !important; height: 116px !important; }
 }
+.client-carousel,
+.client-logo-set,
+.client-logo,
+.client-logo img { border-top: 0 !important; border-bottom: 0 !important; outline: 0 !important; box-shadow: none !important; background-image: none !important; }
+.client-carousel hr,
+.client-logo-set hr,
+.client-logo hr { display: none !important; }
+.client-logo-set::before,
+.client-logo-set::after,
+.client-carousel::before,
+.client-carousel::after { content: none !important; display: none !important; }
