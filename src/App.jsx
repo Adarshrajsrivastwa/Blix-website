@@ -9,6 +9,7 @@ import AboutPage from './pages/AboutPage.jsx'
 import AcademyPage from './pages/AcademyPage.jsx'
 import ServicesPage from './pages/ServicesPage.jsx'
 import ServiceDetail from './pages/ServiceDetail.jsx'
+import DigitalMarketingPage from './pages/DigitalMarketingPage.jsx'
 import BlogPage from './pages/BlogPage.jsx'
 import PortfolioPage from './pages/PortfolioPage.jsx'
 import CaseStudyPage from './pages/CaseStudyPage.jsx'
@@ -24,11 +25,18 @@ function ScrollManager() {
     prevPath.current = pathname
     const behavior = samePage ? 'smooth' : 'instant'
     if (hash) {
-      setTimeout(() => {
+      let attempts = 0
+      let frame
+      const scrollToHash = () => {
         const el = document.querySelector(hash)
-        if (el) el.scrollIntoView({ behavior })
-      }, 50)
-      return
+        if (el) {
+          el.scrollIntoView({ behavior, block: 'start' })
+          return
+        }
+        if (attempts++ < 20) frame = requestAnimationFrame(scrollToHash)
+      }
+      frame = requestAnimationFrame(scrollToHash)
+      return () => cancelAnimationFrame(frame)
     }
     window.scrollTo({ top: 0, behavior })
   }, [pathname, hash])
@@ -193,6 +201,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/services/digital-marketing" element={<DigitalMarketingPage />} />
         <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />

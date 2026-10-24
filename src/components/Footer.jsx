@@ -78,7 +78,7 @@ export default function Footer() {
       <div className="wrap ft-grid">
         <div className="ft-col">
           <h3>Blix Technologies Pvt. Ltd.</h3>
-          <p>Blix Technologies offers innovative, results-oriented digital marketing and web development solutions.</p>
+          <p>Blix Technologies helps businesses grow online with digital marketing, SEO, website development, mobile app development, and software solutions. We help businesses improve their online presence, reach more customers, generate leads, and build a strong brand. From promoting your business online to developing websites, apps, and software as per your requirements, we provide solutions that help your business grow.</p>
         </div>
         <div className="ft-col">
           <h3>Useful Links</h3>
