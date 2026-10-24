@@ -7,12 +7,12 @@ export default function Services() {
       <div className="wrap">
         <div className="top">
           <div>
-            <span className="kicker reveal">Our service list</span>
-            <h2 className="h2 reveal">What we offer <span className="text-pink">to you</span></h2>
+            <span className="kicker reveal reveal-left">Our service list</span>
+            <h2 className="h2 reveal reveal-left">What We Offer To You !</h2>
           </div>
-          <p className="reveal">
-            <strong>Helping your business shine online</strong>
-            From SEO and social media to web, apps, and custom software — pick one service or stack them all into a 360° growth engine.
+          <p className="reveal reveal-right">
+            <strong>Helping Your Business Shine Online</strong>
+            From boosting your digital presence to engaging your audience, we’re here to drive your growth. Let’s team up to unlock your true potential and achieve online success!
           </p>
         </div>
         <div className="bento reveal-stagger">

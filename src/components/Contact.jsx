@@ -47,14 +47,12 @@ export default function Contact() {
     <section className="contact" id="contact">
       <div className="wrap">
         <div className="contact-home-head reveal">
-          <span className="kicker">Contact</span>
-          <h2 className="h2">Get in <span className="text-pink">touch</span></h2>
+          <h2 className="h2">Get in touch</h2>
           <p>Have a project in mind? Tell us what you’re looking to achieve and we’ll help you plan the next step.</p>
         </div>
         <div className="grid">
           <div className="card-info reveal-left" data-vi="up" data-vi-speed="25">
             <div className="contact-home-card-head">
-              <span>Contact details</span>
               <h3>We’re here to help</h3>
               <p>Reach out directly and our team will point you in the right direction.</p>
             </div>

@@ -28,7 +28,6 @@ export default function Clients() {
     <section className="clients" aria-label="Recent clients">
       <div className="wrap">
         <span className="kicker">Our recent clients</span>
-        <h2 className="h2">Brands that trust our work</h2>
       </div>
       <div className="client-carousel" role="group" aria-label="Recent client logos, continuously sliding">
         <div className="client-track">

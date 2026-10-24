@@ -7,10 +7,10 @@ export default function LatestBlog() {
       <div className="wrap">
         <div className="latest-blog-head">
           <div>
-            <span className="kicker reveal">From the blog</span>
-            <h2 className="h2 reveal" id="latest-blog-title">Ideas you can <span className="text-pink">put to work</span></h2>
+            <span className="kicker reveal reveal-left">From the blog</span>
+            <h2 className="h2 reveal reveal-left" id="latest-blog-title">Ideas you can <span className="text-pink">put to work</span></h2>
           </div>
-          <Link className="latest-blog-more reveal" to="/blog">More from the blog <span aria-hidden="true">→</span></Link>
+          <Link className="latest-blog-more reveal reveal-right" to="/blog">More from the blog <span aria-hidden="true">→</span></Link>
         </div>
         <div className="blog-grid latest-blog-grid reveal-stagger">
           {posts.slice(0, 3).map((post) => (

@@ -30,7 +30,6 @@ export default function HomeFaq() {
     <section className="home-faq" aria-labelledby="home-faq-title">
       <div className="wrap">
         <div className="home-faq-head">
-          <span className="kicker">FAQ</span>
           <h2 className="h2" id="home-faq-title">Frequently asked questions</h2>
           <p>Quick answers about our services, process, and getting started.</p>
         </div>

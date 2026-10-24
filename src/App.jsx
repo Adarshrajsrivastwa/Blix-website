@@ -11,6 +11,7 @@ import ServicesPage from './pages/ServicesPage.jsx'
 import ServiceDetail from './pages/ServiceDetail.jsx'
 import BlogPage from './pages/BlogPage.jsx'
 import PortfolioPage from './pages/PortfolioPage.jsx'
+import CaseStudyPage from './pages/CaseStudyPage.jsx'
 import FloatingContact from './components/FloatingContact.jsx'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -99,14 +100,23 @@ function PageMotion() {
   const { pathname } = useLocation()
   useLayoutEffect(() => {
     const context = gsap.context(() => {
-      const targets = gsap.utils.toArray('.reveal,.reveal-left,.reveal-right,.reveal-zoom,.reveal-flip,.reveal-blur,.reveal-slide')
+      const revealSelector = '.reveal,.reveal-left,.reveal-right,.reveal-zoom,.reveal-flip,.reveal-blur,.reveal-slide'
+      const allTargets = gsap.utils.toArray(revealSelector)
+      const isHome = pathname === '/'
+      const staggerGroups = isHome ? gsap.utils.toArray('.reveal-stagger') : []
+      const staggeredTargets = new Set(staggerGroups.flatMap((group) => Array.from(group.querySelectorAll(revealSelector))))
+      const targets = isHome ? allTargets.filter((element) => !staggeredTargets.has(element)) : allTargets
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
       if (prefersReducedMotion) {
-        gsap.set([...targets, ...gsap.utils.toArray('.hero-copy > *, .hero-visual-wrap')], { autoAlpha: 1, clearProps: 'transform' })
+        gsap.set([...allTargets, ...gsap.utils.toArray('.hero-copy > *, .hero-visual-wrap')], { autoAlpha: 1, clearProps: 'transform' })
         return
       }
       targets.forEach((element, index) => {
-        gsap.fromTo(element, { autoAlpha: 0, y: 26, rotationX: 5, rotationY: -1, scale: 0.98, transformPerspective: 900 }, {
+        const sideDirection = element.classList.contains('reveal-left') ? -1 : element.classList.contains('reveal-right') ? 1 : 0
+        const startingPose = isHome
+          ? { autoAlpha: 0, x: sideDirection * 42, y: sideDirection ? 0 : 16, scale: 0.995 }
+          : { autoAlpha: 0, y: 26, rotationX: 5, rotationY: -1, scale: 0.98, transformPerspective: 900 }
+        gsap.fromTo(element, startingPose, {
           autoAlpha: 1,
           y: 0,
           rotationX: 0,
@@ -120,7 +130,30 @@ function PageMotion() {
         })
       })
 
-      const depthTargets = gsap.utils.toArray('.tile,.vm-card,.st,.row,.q,.blog-card,.portfolio-card,.logo-card,.trend,.why-card,.learn,.faq-item,.fees,.cinfo,.card-info,.stat,.director-card,.hero-photo-frame,.acad-hero-visual,.fees-art,.about-grid img,.story-grid img,.collage,.sd-art')
+      staggerGroups.forEach((group) => {
+        const items = Array.from(group.querySelectorAll(revealSelector))
+        if (!items.length) return
+        const timeline = gsap.timeline({ scrollTrigger: { trigger: group, start: 'top 84%', once: true } })
+        items.forEach((element, index) => {
+          const sideDirection = element.classList.contains('reveal-left') ? -1 : element.classList.contains('reveal-right') ? 1 : 0
+          timeline.fromTo(element, {
+            autoAlpha: 0,
+            x: sideDirection * 42,
+            y: sideDirection ? 0 : 18,
+            scale: 0.992,
+          }, {
+            autoAlpha: 1,
+            x: 0,
+            y: 0,
+            scale: 1,
+            duration: 0.68,
+            ease: 'power3.out',
+            clearProps: 'transform',
+          }, index * 0.1)
+        })
+      })
+
+      const depthTargets = gsap.utils.toArray('.vm-card,.st,.row,.q,.portfolio-card,.logo-card,.trend,.why-card,.learn,.faq-item,.fees,.cinfo,.card-info,.stat,.director-card,.hero-photo-frame,.acad-hero-visual,.fees-art,.about-grid img,.story-grid img,.collage,.sd-art')
       depthTargets.forEach((element, index) => {
         const direction = index % 2 === 0 ? 1 : -1
         gsap.fromTo(element, {
@@ -135,11 +168,11 @@ function PageMotion() {
           scrollTrigger: { trigger: element, start: 'top bottom', end: 'bottom top', scrub: 0.7 },
         })
       })
-      gsap.fromTo('.hero-copy > *', { autoAlpha: 0, y: 24, rotationX: 4, rotationY: -1, scale: 0.985, transformPerspective: 900 }, {
-        autoAlpha: 1, y: 0, rotationX: 0, rotationY: 0, scale: 1, duration: 0.75, stagger: 0.09, ease: 'power3.out', clearProps: 'transform',
+      gsap.fromTo('.hero-copy > *', { autoAlpha: 0, x: -48, scale: 0.99 }, {
+        autoAlpha: 1, x: 0, scale: 1, duration: 0.8, stagger: 0.09, ease: 'power3.out', clearProps: 'transform',
       })
-      gsap.fromTo('.hero-visual-wrap', { autoAlpha: 0, y: 24, rotationY: -4, rotationX: 2, scale: 0.96, transformPerspective: 1000 }, {
-        autoAlpha: 1, y: 0, rotationY: 0, rotationX: 0, scale: 1, duration: 0.95, delay: 0.18, ease: 'power3.out', clearProps: 'transform',
+      gsap.fromTo('.hero-visual-wrap', { autoAlpha: 0, x: 48, scale: 0.99 }, {
+        autoAlpha: 1, x: 0, scale: 1, duration: 0.9, delay: 0.16, ease: 'power3.out', clearProps: 'transform',
       })
     })
     return () => context.revert()
@@ -163,6 +196,7 @@ export default function App() {
         <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/case-study" element={<CaseStudyPage />} />
         <Route path="/academy" element={<AcademyPage />} />
         <Route path="/contact" element={<Navigate to="/#contact" replace />} />
       </Routes>

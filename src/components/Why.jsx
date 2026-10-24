@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 const reasons = [
   { icon: 'insight', title: 'In-depth market insight', text: 'Digital strategies that boost visibility, attract quality leads and grow lasting customer relationships with measurable results.' },
   { icon: 'analytics', title: 'Data-driven strategies', text: 'Advanced analytics measure campaign performance, optimize strategy and deliver tangible results.' },
@@ -34,14 +32,11 @@ export default function Why() {
     <section className="why">
       <div className="wrap">
         <div className="side">
-          <span className="kicker reveal">Why Blix</span>
-          <h2 className="h2 reveal">Why partner with <span className="text-pink">Blix Technologies?</span></h2>
-          <p className="reveal">Strategy, creativity and technology working together, with one dedicated contact for your account.</p>
-          <Link to="/#contact" className="btn btn-pink reveal-zoom">Talk to our team</Link>
+          <h2 className="h2 reveal">Why Partner with Blix Technologies for Digital Marketing Services?</h2>
         </div>
         <div className="list reveal-stagger">
           {reasons.map((r) => (
-            <div key={r.title} className="row reveal-right" data-vi="up" data-vi-speed="15">
+            <div key={r.title} className="row reveal" data-vi="up" data-vi-speed="15">
               <ReasonIcon name={r.icon} />
               <div>
                 <h3>{r.title}</h3>

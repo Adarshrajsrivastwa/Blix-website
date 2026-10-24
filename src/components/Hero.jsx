@@ -22,7 +22,6 @@ export default function Hero() {
           </p>
           <div className="cta">
             <Link to="/#contact" className="btn btn-pink">Talk to our team <span aria-hidden="true">↗</span></Link>
-            <Link to="/services" className="hero-text-link">Explore our services <span aria-hidden="true">→</span></Link>
           </div>
           <div className="hero-note"><span /> One team, from first conversation to ongoing improvement</div>
         </div>

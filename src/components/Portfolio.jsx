@@ -42,7 +42,7 @@ export default function Portfolio() {
                 <span className="portfolio-type">{item.type}</span>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
-                <Link to="/services" className="portfolio-link">Explore our services <span aria-hidden="true">↗</span></Link>
+                <Link to="/services" className="portfolio-link">LEARN MORE →</Link>
               </div>
             </article>
           ))}
@@ -64,7 +64,7 @@ export default function Portfolio() {
               <span className="portfolio-type">Web &amp; product</span>
               <h3>Digital experiences with purpose</h3>
               <p>Responsive websites and products designed around real people, clear journeys, and business goals.</p>
-              <Link to="/services/web-development" className="portfolio-link">Explore web development <span aria-hidden="true">↗</span></Link>
+              <Link to="/services/web-development" className="portfolio-link">LEARN MORE →</Link>
             </div>
           </article>
         </div>

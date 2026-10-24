@@ -18,8 +18,9 @@ const links = [
   { to: '/', label: 'Home', key: 'home' },
   { to: '/about', label: 'About Us', key: 'about' },
   { to: '/services', label: 'Services', key: 'services', dropdown: true },
+  { to: '/portfolio', label: 'Portfolio', key: 'portfolio' },
+  { to: '/case-study', label: 'Case Study', key: 'case-study' },
   { to: '/blog', label: 'Blog', key: 'blog' },
-  { to: '/academy', label: 'Academy', key: 'academy', accent: true },
   { to: '/#contact', label: 'Contact Us', key: 'contact' },
 ]
 
@@ -31,7 +32,8 @@ export default function Header() {
   const isActive = (l) => {
     if (l.key === 'home') return pathname === '/' && (!hash || hash === '')
     if (l.key === 'contact') return hash === '#contact'
-    if (l.key === 'academy') return pathname.startsWith('/academy')
+    if (l.key === 'portfolio') return pathname === '/portfolio' && (!hash || hash === '')
+    if (l.key === 'case-study') return pathname.startsWith('/case-study') || pathname.startsWith('/case-studies') || (pathname === '/portfolio' && hash === '#selected-projects')
     if (l.key === 'services') return pathname.startsWith('/services')
     return pathname === l.to
   }
@@ -42,17 +44,7 @@ export default function Header() {
         <AppLink className="logo2" to="/" aria-label="Blix Technologies home">
           <img className="brand-logo" src="/blix-gradient-logo.png" alt="Blix Technologies" />
         </AppLink>
-        <div className="mobile-social" aria-label="Follow Blix Technologies">
-          <a href="https://www.facebook.com/blixtechnologies" aria-label="Facebook" target="_blank" rel="noreferrer">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.3 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2V10H7.4v3h2.7v8h3.2Z" /></svg>
-          </a>
-          <a href="https://www.instagram.com/blixtechnologies/" aria-label="Instagram" target="_blank" rel="noreferrer">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.8" cy="6.5" r=".8" className="mobile-social-dot" /></svg>
-          </a>
-          <a href="https://www.linkedin.com/company/blixtechnologies/posts/" aria-label="LinkedIn" target="_blank" rel="noreferrer">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9v9M6 6.2v.1M10 18v-5.1a3 3 0 0 1 6 0V18M10 10v8" /><circle cx="6" cy="6" r="1" className="mobile-social-dot" /></svg>
-          </a>
-        </div>
+
         <nav id="nav" className={open ? 'open' : ''} aria-label="Main">
           <ul onClick={() => { setOpen(false); setDdOpen(false) }}>
             {links.map((l) => (
