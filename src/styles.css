@@ -4787,6 +4787,8 @@ main#top .voices { padding-top: 42px !important; }
 main#top .clients { padding-bottom: 32px !important; }
 main#top .clients .client-carousel { padding-bottom: 15px !important; }
 main#top .about { padding-top: 40px !important; }
+main#top .hero { padding-bottom: 40px !important; }
+main#top .clients { padding-top: 30px !important; }
 
 @media (max-width: 700px) {
   main#top .hero-copy,
