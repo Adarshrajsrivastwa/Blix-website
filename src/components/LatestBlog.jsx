@@ -24,7 +24,7 @@ export default function LatestBlog() {
                 <div className="blog-meta"><span><b>{post.date}</b></span><span>·</span><span>{post.read} read</span></div>
                 <h3>{post.title}</h3>
                 <p>{post.text}</p>
-                <Link className="blog-read" to="/blog">Read on the blog →</Link>
+                <Link className="blog-read" to="/blog">Read more →</Link>
               </div>
             </article>
           ))}

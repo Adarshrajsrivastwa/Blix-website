@@ -15,12 +15,14 @@ const testimonials = [
   },
   {
     image: '/testimonials/client-03.jpg',
-    name: 'Client review',
+    name: 'Gerald',
+    role: 'Marketing Chief',
     quote: 'Blix Technologies has a unique way of working with its clients as partners. This turned out to be quite an effective approach as it made a real difference across the board. Right place for an affordable & quality digital services in Noida (Delhi NCR). I would happily recommend them to other businesses.',
   },
   {
     image: '/testimonials/client-04.jpg',
-    name: 'Client review',
+    name: 'Prashant Mukund',
+    role: 'Director',
     quote: 'Blix Technologies is a leading SEO & Digital Marketing agency in Noida with a highly skilled team managing our marketing needs seamlessly. We’re impressed with how smoothly they’ve streamlined and aligned the work processes with their SEO team. Their approach has been nothing short of professional, and we’re extremely satisfied with the results.',
   },
 ]

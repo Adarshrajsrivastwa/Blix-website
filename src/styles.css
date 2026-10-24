@@ -21,6 +21,7 @@
   --ar-logo:500/200;
   --ar-favicon:1/1;
 }
+
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:96px}
 body{margin:0;background:var(--paper);color:var(--ink);font:var(--fs-body)/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -1755,7 +1756,7 @@ footer .legal{padding:18px 0}
 }
 .hero-text-link:hover {
   background: #fff !important;
-  border-color: #2E3191 !important;
+  border-color: #EC008C !important;
   color: #2E3191 !important;
   transform: none !important;
   box-shadow: none !important;
@@ -2517,8 +2518,8 @@ footer.ft::before { display: none !important; }
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
 }
 .ft-soc-btn svg {
-  width: 20px !important;
-  height: 20px !important;
+  width: 25px !important;
+  height: 25px !important;
   display: block !important;
   color: #EC008C !important;
 }
@@ -4711,6 +4712,160 @@ main#top .home-faq .home-faq-contact a:hover {
   main#top .contact .contact-home-item > span {
     width: 100% !important;
     text-align: center !important;
+  }
+}
+
+@media (max-width: 700px) {
+  main#top > .clients .wrap { margin-bottom: 14px !important; }
+  main#top > .clients { padding-bottom: 17px !important; }
+  main#top > .clients .client-carousel { padding-top: 13px !important; padding-bottom: 15px !important; }
+  main#top > .about { padding-top: 22px !important; }
+}
+
+.sd-body .bento > .tile h3,
+.sd-body .bento > .tile:hover h3 {
+  color: #2E3191 !important;
+}
+
+main#top .services .bento > .tile h3,
+main#top .services .bento > .tile:hover h3 {
+  color: #2E3191 !important;
+}
+
+main#top .why .row h3,
+main#top .why .row:hover h3 {
+  color: #2E3191 !important;
+}
+
+main#top .voices .q::before {
+  top: -15px !important;
+  right: auto !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 30px !important;
+  height: 30px !important;
+  display: grid !important;
+  place-items: center !important;
+  padding-top: 5px !important;
+  font-size: 32px !important;
+  line-height: 1 !important;
+  border-color: #EC008C !important;
+  color: #EC008C !important;
+}
+main#top .voices .who span {
+  color: #EC008C !important;
+}
+
+main#top .voices .vgrid {
+  padding-top: 24px !important;
+  margin-top: -24px !important;
+}
+
+main#top .contact .card-info .contact-home-item:hover,
+main#top .contact .card-info .contact-home-item:hover > svg {
+  transform: none !important;
+}
+
+main#top .contact .card-info,
+main#top .contact .card-info:hover {
+  transform: none !important;
+}
+
+main#top .contact .card-info .contact-home-item > svg,
+main#top .contact .card-info .contact-home-item:hover > svg {
+  rotate: none !important;
+  transform: none !important;
+}
+
+main#top .home-faq { padding-top: 40px !important; padding-bottom: 45px !important; }
+main#top .contact { padding-top: 40px !important; }
+main#top .latest-blog { padding-bottom: 40px !important; }
+main#top .featured-with { padding-top: 30px !important; padding-bottom: 34px !important; }
+main#top .latest-blog { padding-top: 40px !important; }
+main#top .why { padding-bottom: 42px !important; }
+main#top .voices { padding-top: 42px !important; }
+main#top .clients { padding-bottom: 32px !important; }
+main#top .clients .client-carousel { padding-bottom: 15px !important; }
+main#top .about { padding-top: 40px !important; }
+
+@media (max-width: 700px) {
+  main#top .hero-copy,
+  main#top .about .wrap > div:last-child,
+  main#top .about .h2,
+  main#top .about p,
+  main#top .services .top,
+  main#top .services .top h2,
+  main#top .services .top p,
+  main#top .services .tile,
+  main#top .services .tile p,
+  main#top .services .tile h3,
+  main#top .why .side,
+  main#top .why .side h2,
+  main#top .why .row,
+  main#top .why .row h3,
+  main#top .voices .voices-head,
+  main#top .voices .q-copy,
+  main#top .voices blockquote,
+  main#top .voices .who,
+  main#top .latest-blog-head,
+  main#top .latest-blog .blog-body,
+  main#top .featured-with .wrap,
+  main#top .home-faq-head,
+  main#top .home-faq .faq-q,
+  main#top .home-faq .faq-a,
+  main#top .home-faq-contact,
+  main#top .contact-home-head,
+  main#top .contact .contact-home-card-head,
+  main#top .contact .contact-home-item,
+  main#top .contact .contact-home-item > span,
+  main#top .contact .contact-home-item h3,
+  main#top .contact .contact-home-item a,
+  main#top .contact .contact-home-form-head {
+    text-align: left !important;
+  }
+
+  main#top .voices .q-copy,
+  main#top .voices blockquote,
+  main#top .voices .who {
+    text-align: left !important;
+  }
+  main#top .about .wrap > div:last-child,
+  main#top .about .wrap > div:last-child .h2,
+  main#top .about .wrap > div:last-child p {
+    text-align: left !important;
+  }
+  main#top .about .agency-link-button {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+  main#top .contact .card-info,
+  main#top .contact .contact-home-card-head {
+    text-align: left !important;
+  }
+  main#top .contact .contact-home-item {
+    display: grid !important;
+    grid-template-columns: 54px minmax(0, 1fr) !important;
+    flex-direction: initial !important;
+    align-items: start !important;
+    gap: 18px !important;
+    text-align: left !important;
+  }
+  main#top .contact .contact-home-item > svg {
+    width: 54px !important;
+    height: 54px !important;
+    padding: 12px !important;
+  }
+  main#top .contact .contact-home-item > span {
+    width: auto !important;
+    text-align: left !important;
+  }
+  main#top .contact .contact-home-item h3 {
+    font-size: 18px !important;
+  }
+  main#top .contact .contact-home-item a,
+  main#top .contact .contact-home-item span:not(:first-child) {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
   }
 }
 
