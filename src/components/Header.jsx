@@ -76,7 +76,7 @@ export default function Header() {
                     </div>
                   </>
                 ) : (
-                  <Link to={l.to} className={`nav-lnk ${isActive(l) ? 'on' : ''}${l.accent ? ' nav-accent' : ''}`}>
+                  <Link to={l.to} className={`nav-lnk ${isActive(l) ? 'on' : ''}${l.accent ? ' nav-accent' : ''}${l.key === 'contact' ? ' nav-contact' : ''}`}>
                     {l.label}
                   </Link>
                 )}

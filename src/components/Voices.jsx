@@ -81,8 +81,7 @@ export default function Voices() {
       <div className="wrap">
         <div className="voices-head reveal">
           <div>
-            <span className="kicker">CLIENT’S TESTIMONIAL</span>
-            <h2 className="h2">Reviews from our happy clients</h2>
+            <h2 className="h2">CLIENT’S TESTIMONIAL</h2>
           </div>
         </div>
         <div className="v-carousel reveal-stagger" aria-label="Client testimonials">
