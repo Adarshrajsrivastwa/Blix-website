@@ -84,7 +84,7 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-        <Link to="/#contact" className="btn2 btn-q">Get A Quote</Link>
+        <Link to="/#contact" className="btn2 btn-q"><span>Get A Quote</span></Link>
         <button className="mb2" aria-expanded={open} aria-controls="nav" onClick={() => setOpen(!open)}>
           <svg width="22" height="22" viewBox="0 0 22 22"><g stroke="#2E3191" strokeWidth="2.2" strokeLinecap="round"><path d="M3 6h16M3 11h16M3 16h16" /></g></svg>
         </button>

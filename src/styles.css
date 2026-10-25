@@ -2933,7 +2933,7 @@ main#top .contact-home-head .h2 {
   border-radius: 9px;
 }
 .contact-map-wrap {
-  margin-top: 18px;
+  margin-top: 20px;
   border-radius: 18px;
   box-shadow: 0 12px 32px rgba(21, 32, 66, .055);
 }
@@ -5096,8 +5096,8 @@ main#top .approach .wrap { max-width: 1240px; }
 .approach-copy { max-width: 630px; position: relative; z-index: 2; }
 .approach-kicker { display: inline-flex; align-items: center; gap: 16px; margin-bottom: 17px; color: #3f4b60; font-size: 14px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
 .approach-kicker i { width: 66px; height: 2px; background: linear-gradient(90deg,#df5f9b,#9078e8); }
-main#top .approach h2 { max-width: 640px; color: #101a2d; font-size: clamp(30px,3.2vw,42px); line-height: 1.15; letter-spacing: -.035em; }
-main#top .approach h2 span { display: block; color: #2e3191; background: linear-gradient(90deg,#174bb8 4%,#6a2fa9 56%,#c32678 100%); background-clip: text; -webkit-text-fill-color: transparent; }
+main#top .approach h2 { max-width: 640px; color: #2e3191; font-size: clamp(30px,3.2vw,42px); line-height: 1.15; letter-spacing: -.035em; }
+main#top .approach h2 span { display: block; color: #2e3191; background: none; -webkit-text-fill-color: currentColor; }
 .approach-copy p { margin-top: 20px; color: #424d5d; font-size: 16px; line-height: 1.65; }
 .approach-cta { display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; min-width: 390px; margin-top: 26px; padding: 15px 24px 15px 30px; border-radius: 10px; background: #ec008c; color: #fff; box-shadow: 0 12px 24px rgba(23,70,173,.14); font-size: 14px; font-weight: 750; transition: transform .2s, background .2s; }
 main#top a.approach-cta,
@@ -5304,3 +5304,191 @@ main#top .row:hover .reason-icon,
 main#top .v-arrow:hover:not(:disabled) { background: #ec008c !important; border-color: #ec008c !important; color: #fff !important; }
 main#top .st:hover .st-icon svg,
 main#top .row:hover .reason-icon svg { color: #fff !important; stroke: #fff !important; }
+
+/* Header quote CTA: outlined at rest, then resolve to a pink text link on hover. */
+.hdr .btn-q {
+  position: relative;
+  justify-content: center;
+  transition: color .24s ease, border-color .24s ease, background-color .24s ease !important;
+}
+.hdr .btn-q::before {
+  content: '›';
+  position: absolute;
+  left: 14px;
+  color: #ec008c;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity .18s ease, transform .18s ease;
+}
+.hdr .btn-q span {
+  display: inline-block;
+  transition: transform .2s ease;
+}
+.hdr .btn-q:hover {
+  color: #ec008c !important;
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+  animation: quote-outline-fade .35s ease-out;
+}
+.hdr .btn-q:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+.hdr .btn-q:hover span {
+  transform: translateX(4px);
+}
+@keyframes quote-outline-fade {
+  0% { border-color: #ec008c; }
+  100% { border-color: transparent; }
+}
+
+.hdr #nav .nav-lnk:hover,
+.hdr #nav .dd-lnk:hover,
+.hdr #nav .nav-lnk.on,
+.hdr #nav .nav-lnk.on:hover {
+  background: transparent !important;
+}
+.hdr #nav .dd-dot {
+  display: none;
+}
+.hdr #nav .dd-lnk {
+  gap: 0;
+}
+.hdr #nav .dd-lnk:hover {
+  color: #ec008c !important;
+}
+.logo2:focus-visible {
+  outline: none;
+}
+main#top .approach h2,
+main#top .approach h2 span {
+  color: #2e3191 !important;
+  background: none !important;
+  -webkit-text-fill-color: #2e3191 !important;
+}
+main#top > .contact {
+  padding-bottom: 22px !important;
+}
+.btn-pink:hover,
+.contact-submit-row .btn:hover {
+  background: #ec008c !important;
+}
+.btn-line:hover,
+.btn2:not(.btn-q):hover,
+.v-arrow:hover:not(:disabled) {
+  background-color: transparent !important;
+}
+.st:hover .st-icon,
+.row:hover .reason-icon {
+  background: #fff !important;
+  color: #2e3191 !important;
+  border-color: #dce2ea !important;
+}
+.st:hover .st-icon svg,
+.row:hover .reason-icon svg { color: #2e3191 !important; stroke: #2e3191 !important; }
+main#top .hero .btn-pink:hover,
+main#top .about .agency-link-button:hover {
+  background: #ec008c !important;
+  border-color: #ec008c !important;
+}
+main#top .home-faq .home-faq-contact a:hover {
+  color: #ec008c !important;
+}
+main#top .st:hover .st-icon,
+main#top .row:hover .reason-icon,
+main#top .stats-strip-item:hover .stats-strip-icon,
+main#top .industry-card:hover .industry-icon-wrap {
+  background: #fff !important;
+  color: #2e3191 !important;
+  border-color: #dce2ea !important;
+  box-shadow: none !important;
+}
+main#top .st:hover .st-icon svg,
+main#top .row:hover .reason-icon svg {
+  color: #2e3191 !important;
+  stroke: #2e3191 !important;
+}
+main#top .home-faq .faq-item:hover {
+  background: #fff !important;
+  border-color: #e5e7eb !important;
+  box-shadow: none !important;
+}
+main#top .home-faq .faq-item:hover .faq-q i {
+  background: #fff !important;
+  color: #2e3191 !important;
+}
+main#top .home-faq .faq-item:has(.faq-q[aria-expanded="true"]) {
+  border-color: #e5e7eb !important;
+  box-shadow: none !important;
+}
+main#top .home-faq .faq-q i {
+  background: #f8f8fa !important;
+}
+main#top .latest-blog .blog-card:hover {
+  background: #fff !important;
+  border-color: #e5e7eb !important;
+  box-shadow: none !important;
+}
+main#top .latest-blog .blog-card:hover .blog-body h3,
+main#top .latest-blog .blog-card:hover .blog-read {
+  color: #ec008c !important;
+}
+main#top .tile:hover,
+main#top .portfolio-card:hover,
+main#top .voices .q:hover,
+main#top .blog-card:hover,
+main#top .st:hover,
+main#top .industry-card:hover,
+main#top .vm-card:hover,
+main#top .why-card:hover,
+main#top .trend:hover,
+main#top .learn:hover,
+main#top .cinfo:hover {
+  box-shadow: none !important;
+  border-color: #e5e7eb !important;
+}
+main#top .vm-card:hover::after,
+main#top .st:hover::after,
+main#top .portfolio-card:hover::after,
+main#top .cinfo:hover::after,
+main#top .q:hover::after {
+  opacity: 0 !important;
+  background: none !important;
+}
+main#top .why .row:hover {
+  background: #fff !important;
+  border-color: #e5e7eb !important;
+  box-shadow: 0 8px 24px rgba(31, 41, 80, .06) !important;
+}
+main#top .why .row:hover::before {
+  opacity: 0 !important;
+  background: transparent !important;
+}
+main#top .why .row:hover .reason-icon {
+  background: #fff !important;
+  color: #2e3191 !important;
+  border-color: #e5e7eb !important;
+}
+main#top .why .row:hover .reason-icon svg {
+  color: #2e3191 !important;
+  stroke: #2e3191 !important;
+}
+main#top .why .row:hover h3 {
+  color: #ec008c !important;
+}
+main#top .tile:hover .ic {
+  background: #fff !important;
+  color: #2e3191 !important;
+  border-color: #e5e7eb !important;
+  box-shadow: none !important;
+}
+main#top .tile:hover .ic svg {
+  color: #2e3191 !important;
+  stroke: #2e3191 !important;
+}
+main#top .tile:hover h3,
+main#top .tile:hover .go {
+  color: #ec008c !important;
+}
