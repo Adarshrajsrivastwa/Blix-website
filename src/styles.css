@@ -5290,3 +5290,17 @@ main#top .featured-logo img {
 .client-logo-set::after,
 .client-carousel::before,
 .client-carousel::after { content: none !important; display: none !important; }
+
+/* Homepage hover states use pink accents instead of blue-tinted backgrounds. */
+.hdr #nav .nav-lnk:hover,
+.hdr #nav .dd-lnk:hover { background: #fce7f3 !important; }
+main#top .hero .btn-pink:hover,
+main#top .btn2:hover,
+main#top .contact-submit-row .btn:hover,
+main#top a.approach-cta:hover { background: #ec008c !important; border-color: #ec008c !important; color: #fff !important; }
+main#top a.approach-cta:hover span { color: #fff !important; }
+main#top .st:hover .st-icon,
+main#top .row:hover .reason-icon,
+main#top .v-arrow:hover:not(:disabled) { background: #ec008c !important; border-color: #ec008c !important; color: #fff !important; }
+main#top .st:hover .st-icon svg,
+main#top .row:hover .reason-icon svg { color: #fff !important; stroke: #fff !important; }
