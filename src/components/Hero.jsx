@@ -28,30 +28,7 @@ export default function Hero() {
 
         <aside className="hero-visual-wrap" aria-label="Blix team and approach">
           <div className="hero-photo-frame">
-            <img src="/studio-session.png" alt="A team discussing campaign ideas around a table" fetchPriority="high" />
-            <div className="hero-photo-shade" />
-            
-            {/* Clean Badges */}
-            <div className="hero-float-badge badge-growth" aria-hidden="true">
-              <span className="badge-pulse-dot" />
-              <div className="badge-text">
-                <small>AI Marketing</small>
-                <b>+280% Growth</b>
-              </div>
-            </div>
-
-            <div className="hero-float-badge badge-retention" aria-hidden="true">
-              <span className="badge-icon-star">★</span>
-              <div className="badge-text">
-                <small>Client Impact</small>
-                <b>99.4% Results</b>
-              </div>
-            </div>
-
-            <div className="hero-photo-copy">
-              <span>BUILT AROUND YOUR BUSINESS</span>
-              <b>People first.<br />Performance with purpose.</b>
-            </div>
+            <img src="/home-team-strategy.png" alt="Digital marketing team planning ideas and growth strategy together" fetchPriority="high" />
           </div>
           <div className="hero-focus-list">
             {focusAreas.map((item) => (

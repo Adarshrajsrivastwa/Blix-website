@@ -49,10 +49,11 @@ export default function Approach() {
           </div>
           <div className="approach-visual" aria-label="Blix team working together on a digital growth strategy">
             <div className="approach-orbit" />
-            <img src="/studio-session.png" alt="Blix team discussing a digital marketing strategy around a laptop" loading="lazy" decoding="async" />
+            <img src="/about-strategy-meeting.png" alt="Digital marketing team reviewing strategy and campaign performance together" loading="lazy" decoding="async" />
             {offerings.map((item) => <div className={`approach-float ${item.className}`} key={item.title}><span className="approach-float-icon"><Icon name={item.icon} /></span><span><strong>{item.title}</strong><small>{item.lines.map(line => <span key={line}>{line}</span>)}</small></span></div>)}
             <div className="approach-growth"><strong>Business Growth</strong><b>↗ +150%</b><div aria-hidden="true">{[18, 27, 38, 48, 60, 72, 88].map((height, i) => <i key={i} style={{ height: `${height}%` }} />)}</div></div>
           </div>
+          <img className="approach-mobile-art" src="/studio-session.png" alt="Marketing team collaborating around a table" loading="lazy" decoding="async" />
         </div>
         <div className="approach-steps">
           {steps.map((step, i) => <article className="approach-step" key={step.number}>

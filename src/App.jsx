@@ -64,46 +64,6 @@ function ScrollProgress() {
   )
 }
 
-function CursorSpotlight() {
-  const lightRef = useRef(null)
-
-  useEffect(() => {
-    if (window.matchMedia('(pointer: coarse)').matches) return undefined
-    const light = lightRef.current
-    if (!light) return undefined
-
-    let mouseX = -200
-    let mouseY = -200
-    let currentX = -200
-    let currentY = -200
-    let raf
-
-    const handleMouseMove = (e) => {
-      mouseX = e.clientX
-      mouseY = e.clientY
-    }
-
-    const animate = () => {
-      currentX += (mouseX - currentX) * 0.12
-      currentY += (mouseY - currentY) * 0.12
-      light.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`
-      raf = requestAnimationFrame(animate)
-    }
-
-    window.addEventListener('mousemove', handleMouseMove, { passive: true })
-    raf = requestAnimationFrame(animate)
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove)
-      cancelAnimationFrame(raf)
-    }
-  }, [])
-
-  return <div ref={lightRef} className="cursor-spotlight" aria-hidden="true" />
-}
-
-
-
 function PageMotion() {
   const { pathname } = useLocation()
   useLayoutEffect(() => {
@@ -192,7 +152,6 @@ export default function App() {
   return (
     <>
       <ScrollProgress />
-      <CursorSpotlight />
       <ScrollManager />
       <PageMotion />
       <Header />

@@ -3,66 +3,108 @@ import SEO from '../components/SEO.jsx'
 
 export const posts = [
   {
-    tag: 'SEO',
-    image: '/campaign-planning.png',
-    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="10" cy="10" r="6" /><path d="M15 15l6 6" /></svg>),
-    date: '28 Sep 2026',
+    tag: 'PPC Advertising',
+    image: '/blog-ppc-management.jpg',
+    imageAlt: 'PPC management services and campaign planning',
+    date: 'Oct 28, 2026',
+    published: '2026-10-28',
     read: '6 min',
-    title: '7 SEO changes you should make before the 2026 festive season',
-    text: 'Core Web Vitals, structured data, local pack optimization, and content pruning — here is the shortlist we execute for every client before Diwali traffic spikes.',
+    title: 'PPC Management Services: How to Choose the Right Agency',
+    text: 'Quick Answer: Hiring a professional or agency to design, manage, and enhance your pay-per-click campaigns can help you reach the right audience and get more from your ad budget.',
   },
   {
-    tag: 'Paid Ads',
-    image: '/studio-session.png',
-    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 17l6-6 4 4 8-8M15 7h6v6" /></svg>),
-    date: '22 Sep 2026',
-    read: '8 min',
-    title: 'Performance Max campaigns: how to structure them for real ROI in India',
-    text: 'PMax can work beautifully — or burn your budget. Here is how we set up asset groups, signals, negative keywords, and landing pages for D2C and B2B clients.',
-  },
-  {
-    tag: 'Social Media',
-    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="16" rx="3" /><path d="M8 10h8M8 14h5" /></svg>),
-    date: '18 Sep 2026',
-    read: '5 min',
-    title: 'Instagram reels that convert: the 4-part formula we use for clients',
-    text: 'Hook, proof, benefit, CTA. It sounds simple but each step has a specific job. Here is our framework with real examples from e-commerce and services brands.',
-  },
-  {
-    tag: 'Web Design',
-    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="12" rx="2" /><path d="M8 20h8M12 16v4" /></svg>),
-    date: '12 Sep 2026',
+    tag: 'AEO, GEO, SEO',
+    image: '/blog-google-ai-overviews.jpg',
+    imageAlt: 'How to optimize a website for Google AI Overviews',
+    date: 'Oct 21, 2026',
+    published: '2026-10-21',
     read: '7 min',
-    title: 'Landing page CRO: 11 changes that doubled lead volume for a B2B SaaS client',
-    text: 'We rebuilt one form-heavy landing page and doubled qualified lead volume without increasing traffic. Here are the exact design, copy, and trust signals that moved the needle.',
+    title: 'How to Optimize Your Website for Google AI Overviews',
+    text: 'Quick Answer: Make sure your pages are indexable, explicitly address real questions, and use clear, helpful content that search engines can understand.',
   },
   {
-    tag: 'Branding',
-    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" /></svg>),
-    date: '08 Sep 2026',
-    read: '6 min',
-    title: 'Brand voice in 2026: why AI copy makes consistency more important, not less',
-    text: 'AI lets anyone write. It also makes sameness louder than ever. Here is how we build and maintain a distinct, recognizable brand voice across every channel.',
+    tag: 'Social Media Marketing',
+    image: '/blog-social-pricing.jpg',
+    imageAlt: 'Social media marketing services pricing and ROI guide',
+    date: 'Oct 12, 2026',
+    published: '2026-10-12',
+    read: '8 min',
+    title: 'Social Media Marketing Services: Pricing & ROI Guide 2026',
+    text: "Quick Answer: Professional packages that oversee a company's presence on social media sites can include strategy, content, community management, and reporting.",
   },
   {
-    tag: 'AI & Tools',
-    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="7" y="7" width="10" height="10" rx="2" /><path d="M12 2v5M12 17v5M2 12h5M17 12h5" /></svg>),
-    date: '02 Sep 2026',
+    tag: 'SEO',
+    image: '/blog-technical-seo.jpg',
+    imageAlt: 'Technical SEO guide for 2026',
+    date: 'Sep 8, 2026',
+    published: '2026-09-08',
+    read: '8 min',
+    title: 'What Is Technical SEO? The Complete Guide for 2026',
+    text: 'Quick Answer: Technical SEO is the process of fixing a website’s behind-the-scenes elements so search engines can crawl, understand, and index it properly.',
+  },
+  {
+    tag: 'Digital Marketing',
+    image: '/blog-integrated-marketing.jpg',
+    imageAlt: 'Integrated digital marketing strategy guide for 2026',
+    date: 'Sep 1, 2026',
+    published: '2026-09-01',
     read: '9 min',
-    title: 'The AI tools we actually use every month in a live digital agency',
-    text: 'Not every AI tool sticks. Here are the ones still in our workflow after the hype cycle — for ad copy, SEO briefs, creative QA, reporting, and client delivery.',
+    title: 'Integrated Digital Marketing: The Complete Strategy Guide for 2026',
+    text: 'Quick Answer: Integrated digital marketing ensures that each channel supports the others, creating a consistent customer experience and a stronger overall strategy.',
   },
   {
-    tag: 'Email Marketing',
-    icon: (<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>),
-    date: '29 Sep 2026',
-    read: '6 min',
-    title: 'Welcome emails that turn new subscribers into engaged customers',
-    text: 'A useful welcome flow sets expectations, delivers the promised value, and gives readers one clear next step. Here is how to plan the first three emails and measure what earns attention.',
+    tag: 'Mobile App Development',
+    image: '/blog-android-development.jpg',
+    imageAlt: 'Android app development guide for 2026',
+    date: 'Aug 25, 2026',
+    published: '2026-08-25',
+    read: '8 min',
+    title: 'Android App Development: Complete Guide to Building Android Apps in 2026',
+    text: 'The process of creating, testing, and releasing apps for Android devices is known as Android app development. This guide covers the key stages and tools.',
+  },
+  {
+    tag: 'Online Reputation Management',
+    image: '/blog-online-reputation.jpg',
+    imageAlt: 'Online reputation management guide',
+    date: 'Aug 19, 2026',
+    published: '2026-08-19',
+    read: '7 min',
+    title: 'Online Reputation Management: The Complete Guide to Protecting and Growing Your Brand Online',
+    text: 'Quick Answer: Online reputation management, or ORM, is the continuous process of keeping an eye on how your brand appears online and building trust with customers.',
+  },
+  {
+    tag: 'Mobile App Development',
+    image: '/blog-mobile-app-noida.jpg',
+    imageAlt: 'Mobile app development company in Noida guide',
+    date: 'Aug 11, 2026',
+    published: '2026-08-11',
+    read: '7 min',
+    title: 'Mobile App Development Company in Noida: The Complete Guide',
+    text: 'Over 7.5 billion people use smartphones worldwide, and most sectors now depend on mobile experiences to serve customers and grow their business.',
+  },
+  {
+    tag: 'Digital Marketing',
+    image: '/blog-digital-agency-india.jpg',
+    imageAlt: 'How to choose the best digital marketing agency in India',
+    date: 'Aug 11, 2026',
+    published: '2026-08-11',
+    read: '8 min',
+    title: 'Best Digital Marketing Agency in India: How to Choose One That Actually Grows Your Business',
+    text: 'Selecting the top digital marketing company in India can have a big impact on how your company reaches customers, earns leads, and grows.',
+  },
+  {
+    tag: 'Website Development',
+    image: '/blog-web-development.jpg',
+    imageAlt: 'Web development services in India',
+    date: 'Aug 5, 2026',
+    published: '2026-08-05',
+    read: '7 min',
+    title: 'Web Development Services in India: Build a Fast, Secure & SEO-Friendly Website',
+    text: "These days, a company's website frequently serves as the initial point of contact for potential customers. A fast, secure, search-friendly site helps make that first visit count.",
   },
 ]
 
-const tags = ['SEO', 'Paid Ads', 'Social Media', 'Web Design', 'Branding', 'AI & Tools', 'Email Marketing']
+const tags = [...new Set(posts.map((post) => post.tag))]
 
 export default function BlogPage() {
   const [activeTag, setActiveTag] = useState('')
@@ -75,12 +117,12 @@ export default function BlogPage() {
         '@context': 'https://schema.org',
         '@type': 'Blog',
         name: 'Blix Technologies Blog',
-        description: 'Playbooks, tactics, and case studies from a live AI digital marketing agency in Noida.',
+        description: 'Guides on PPC management, SEO, social media marketing, app development, online reputation, and web development.',
         blogPost: posts.map((p, i) => ({
           '@type': 'BlogPosting',
           headline: p.title,
           description: p.text,
-          datePublished: p.date,
+          datePublished: p.published,
           keywords: p.tag,
           articleSection: p.tag,
           author: { '@type': 'Organization', name: 'Blix Technologies' },
@@ -93,17 +135,17 @@ export default function BlogPage() {
   return (
     <main id="top">
       <SEO
-        title="Blog | Digital Marketing, SEO & AI Case Studies"
-        description="Read practical playbooks, SEO tactics, paid ads case studies, social media strategies, and AI tool reviews from Blix Technologies — a Noida digital marketing agency."
-        keywords="digital marketing blog, SEO case studies, Google Ads tips, social media strategy blog, AI marketing tools, Blix Technologies blog"
+        title="Blog | Digital Marketing, SEO, PPC & App Development Guides"
+        description="Explore Blix Technologies guides on PPC management, Google AI Overviews, social media marketing, technical SEO, app development, online reputation, and web development."
+        keywords="PPC management, Google AI Overviews, social media marketing, technical SEO, digital marketing guide, Android app development, online reputation management, web development"
         jsonLd={blogLd}
       />
       <section className="sd-head">
         <div className="wrap" style={{ textAlign: 'center' }}>
           <span className="kicker reveal-blur">Blix blog</span>
-          <h1 className="reveal" style={{ maxWidth: '16em', margin: '0 auto' }}>Playbooks, tactics, and case studies from our agency floor</h1>
+          <h1 className="reveal" style={{ maxWidth: '16em', margin: '0 auto' }}>Digital Marketing &amp; Development Guides</h1>
           <p className="about-lead reveal" style={{ maxWidth: '40em', margin: '18px auto 0' }}>
-            Practical, non-fluffy writing from the team running campaigns every day. No frameworks without screenshots, no advice without results.
+            Explore practical guides to PPC, SEO, social media, app development, online reputation, and building a stronger digital presence.
           </p>
           <div className="tag-cloud reveal-stagger" role="group" aria-label="Filter articles by topic">
             {tags.map((tag) => (
@@ -125,10 +167,9 @@ export default function BlogPage() {
         <div className="wrap">
           <div className="blog-grid reveal-stagger">
             {filteredPosts.map((p) => (
-              <article key={p.title} className="blog-card reveal-flip" data-vi="up" data-vi-speed="15">
+              <article key={p.title} className="blog-card reveal" data-vi="up" data-vi-speed="15">
                 <div className="blog-img">
-                  {p.image && <img className="blog-photo" src={p.image} alt="" loading="lazy" decoding="async" />}
-                  <span className="b-tag">{p.tag}</span>
+                  {p.image && <img className="blog-photo" src={p.image} alt={p.imageAlt} loading="lazy" decoding="async" />}
                   {!p.image && <div className="blog-ic">{p.icon}</div>}
                 </div>
                 <div className="blog-body">

@@ -5,11 +5,7 @@ export default function About() {
     <section className="about" id="about">
       <div className="wrap">
         <div className="collage about-visual reveal-left">
-          <img src="/campaign-planning.png" alt="Creative team planning a brand campaign" loading="lazy" decoding="async" />
-          <div className="about-photo-note">
-            <span className="about-note-mark" aria-hidden="true">b</span>
-            <span><strong>Strategy meets creativity</strong><small>Thoughtful digital growth, built around your goals</small></span>
-          </div>
+          <img src="/about-strategy-meeting.png" alt="Digital marketing team reviewing strategy and campaign performance together" loading="lazy" decoding="async" />
         </div>
         <div>
           <h2 className="h2 reveal-slide reveal-right"><span>Digital Marketing Agency in Noida</span><span>that Offers Guaranteed Results</span></h2>

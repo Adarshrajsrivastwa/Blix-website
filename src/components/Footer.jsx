@@ -1,17 +1,5 @@
 import AppLink from './AppLink.jsx'
 
-const useful = [
-  { label: '360 Digital Marketing', to: '/services/digital-marketing' },
-  { label: 'SEO Services', to: '/services/seo' },
-  { label: 'Social Media Services', to: '/services/social-media' },
-  { label: 'Real Estate Marketing', to: '/services/real-estate-marketing' },
-  { label: 'Online Reputation Management', to: '/services/orm' },
-  { label: 'Personal Branding', to: '/services/personal-branding' },
-  { label: 'Web Development', to: '/services/web-development' },
-  { label: 'Mobile App Development', to: '/services/app-development' },
-  { label: 'Software Development', to: '/services/software-development' },
-]
-
 const company = [
   { label: 'About us', to: '/about' },
   { label: 'Our Services', to: '/services' },
@@ -74,19 +62,14 @@ const social = [
 export default function Footer() {
   return (
     <footer className="ft">
-      {/* 4-column main section */}
+      {/* 3-column main section */}
       <div className="wrap ft-grid">
         <div className="ft-col">
-          <h3>Blix Technologies Pvt. Ltd.</h3>
+          <div className="ft-brand-head">
+            <img src="/blix-gradient-logo.png" alt="Blix Technologies" />
+            <h3>Blix Technologies Pvt. Ltd.</h3>
+          </div>
           <p>Blix Technologies helps businesses grow online with digital marketing, SEO, website development, mobile app development, and software solutions. We help businesses improve their online presence, reach more customers, generate leads, and build a strong brand. From promoting your business online to developing websites, apps, and software as per your requirements, we provide solutions that help your business grow.</p>
-        </div>
-        <div className="ft-col">
-          <h3>Useful Links</h3>
-          <ul>
-            {useful.map((u) => (
-              <li key={u.label}><AppLink to={u.to}>{u.label}</AppLink></li>
-            ))}
-          </ul>
         </div>
         <div className="ft-col">
           <h3>Our Company</h3>

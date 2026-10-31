@@ -14,10 +14,9 @@ export default function LatestBlog() {
         </div>
         <div className="blog-grid latest-blog-grid reveal-stagger">
           {posts.slice(0, 3).map((post) => (
-            <article key={post.title} className="blog-card reveal-flip">
+            <article key={post.title} className="blog-card reveal">
               <div className="blog-img">
                 {post.image && <img className="blog-photo" src={post.image} alt="" loading="lazy" decoding="async" />}
-                <span className="b-tag">{post.tag}</span>
                 {!post.image && <div className="blog-ic">{post.icon}</div>}
               </div>
               <div className="blog-body">
